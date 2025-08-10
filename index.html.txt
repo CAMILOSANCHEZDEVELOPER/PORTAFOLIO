@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camilo Andres Serrano Sanchez - Portafolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato&family=Montserrat&family=Oswald&family=Raleway&family=Merriweather&family=Nunito&family=Playfair+Display&family=Poppins&family=Open+Sans&family=Ubuntu&family=Source+Code+Pro&family=Lobster&family=Pacifico&family=Bebas+Neue&family=Anton&family=Dancing+Script&family=Shadows+Into+Light&family=Caveat&family=Indie+Flower&family=Press+Start+2P&family=Special+Elite&family=Sacramento&family=Orbitron&family=Cinzel&family=Architects+Daughter&family=Kalam&family=Zeyada&family=Major+Mono+Display&family=Homemade+Apple&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="absolute top-4 right-4 sm:top-8 sm:right-8 z-40">
+        <button id="login-btn" class="btn-shine bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg inline-flex items-center gap-2">
+            <i class="fas fa-sign-in-alt"></i>
+            Login
+        </button>
+    </div>
+
+    <header class="text-center my-8 sm:my-12">
+        <img src="https://media.licdn.com/dms/image/v2/C4E03AQFI1gjB9HEr3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1664073834405?e=1757548800&v=beta&t=aWnwnq91ZMg0rrItgcR6SLm-d_Tg7qWEjKFFPGzpxUQ" alt="Foto de Perfil" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-purple-500 shadow-lg">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold main-title">Camilo Andres Serrano Sanchez</h1>
+        <p class="text-lg text-gray-300 mt-6 max-w-2xl mx-auto">Desarrollador Full-Stack y Analista de Datos apasionado por construir soluciones tecnológicas y extraer valor de la información.</p>
+        
+        <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-x-6 gap-y-3 text-gray-300">
+            <a href="mailto:camilosanchezme@gmail.com" class="hover:text-white transition-colors flex items-center gap-2">
+                <i class="fas fa-envelope text-sky-400"></i>
+                camilosanchezme@gmail.com
+            </a>
+            <a href="https://wa.me/573209415494" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                <i class="fab fa-whatsapp text-green-400"></i>
+                +57 3209415494
+                <span class="ml-2 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full animate-pulse">¡Escríbeme!</span>
+            </a>
+        </div>
+        
+        <p class="text-md text-gray-400 mt-4">28 años (Nacido en 1997)</p>
+         <div class="mt-8 flex justify-center items-center gap-6 flex-wrap">
+              <a href="https://www.linkedin.com/in/camilo-serrano-sanchez-/" target="_blank" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="https://wa.me/573209415494" target="_blank" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-whatsapp fa-2x"></i></a>
+              <a href="mailto:camilosanchezme@gmail.com" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
+              <a href="#" class="btn-shine bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg ml-4 inline-flex items-center gap-2">
+                  <i class="fas fa-download"></i>
+                  Descargar CV
+              </a>
+       </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        
+        <div class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Proyectos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="project-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-sky-400">Inventario con IA y Lector de Códigos</h3>
+                    <p class="text-gray-300 mt-2">Sistema de inventario inteligente con lector de códigos de barras en tiempo real, utilizando Firebase Cloud.</p>
+                </div>
+                <a href="https://camilosanchezdeveloper.github.io/SENA---CONVOCATORIA-CERTIFICATON/" target="_blank" rel="noopener noreferrer" class="project-card p-6 rounded-lg block hover:no-underline">
+                    <h3 class="text-xl font-bold text-sky-400">Gestor de Convocatorias SENA</h3>
+                    <p class="text-gray-300 mt-2">Aplicativo para la gestión de "Certificatones" del SENA en Colombia, optimizando el proceso de inscripción y seguimiento.</p>
+                </a>
+                <div class="project-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-sky-400">Análisis Vehicular con Computer Vision</h3>
+                    <p class="text-gray-300 mt-2">App web que extrae placas de vehículos y analiza su estado para un avalúo preliminar, ideal para la compra de seguros.</p>
+                </div>
+                <div class="project-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-sky-400">Contador de Personas con Computer Vision</h3>
+                    <p class="text-gray-300 mt-2">Implementación de un sistema de visión por computador para el conteo preciso de personas en diferentes entornos.</p>
+                </div>
+                 <a href="https://camilosanchezdeveloper.github.io/CAMILO-SANCHEZ-DEVELOPER/" target="_blank" rel="noopener noreferrer" class="project-card p-6 rounded-lg block hover:no-underline">
+                    <h3 class="text-xl font-bold text-sky-400">Galería de Recursos para Desarrolladores</h3>
+                    <p class="text-gray-300 mt-2">Una galería interactiva de componentes y recursos para desarrolladores front-end (¡como la que estás viendo!).</p>
+                </a>
+                 <a href="https://studio--la-pea-transcribe.us-central1.hosted.app/" target="_blank" rel="noopener noreferrer" class="project-card p-6 rounded-lg block hover:no-underline">
+                    <h3 class="text-xl font-bold text-sky-400">Transcripción con IA</h3>
+                    <p class="text-gray-300 mt-2">Aplicativo de transcripción automática de audio a texto para la Alcaldía de La Peña, Cundinamarca.</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Experiencia Laboral</h2>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <div class="experience-card p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <h3 class="text-xl font-bold text-sky-400">Desarrollador y Soporte TI</h3>
+                        <span class="text-sm text-gray-400">Mar 2025 - Presente</span>
+                    </div>
+                    <p class="text-lg font-semibold text-white">SENA</p>
+                    <p class="text-gray-300 mt-2">Participé en el diseño y desarrollo de una aplicación web para la gestión de convocatorias, implementando soluciones con JavaScript, Node.js y React. Adicionalmente, brindé asesoría técnica a equipos multidisciplinarios en áreas de Business Intelligence, IA y desarrollo de software, influyendo en la toma de decisiones estratégicas.</p>
+                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Felipe Herrera Rincon (Líder Equipo DSNFT) - <a href="tel:+573176680060" class="text-sky-400 hover:underline">317 6680060</a></p>
+                </div>
+                <div class="experience-card p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <h3 class="text-xl font-bold text-sky-400">Business Intelligence Analyst</h3>
+                          <span class="text-sm text-gray-400">May 2024 - Feb 2025</span>
+                    </div>
+                    <p class="text-lg font-semibold text-white">Nicotec</p>
+                    <p class="text-gray-300 mt-2">Automaticé la generación de informes de ventas y KPIs mediante Power BI y SQL. Desarrollé un sistema con IA para el análisis de métricas, logrando una reducción del 40% en el tiempo de análisis y optimizando significativamente la toma de decisiones en la empresa.</p>
+                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Roger Arbey Plazas Gomez (Director) - <a href="tel:+573118716887" class="text-sky-400 hover:underline">311 8716887</a></p>
+                </div>
+                 <div class="experience-card p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <h3 class="text-xl font-bold text-sky-400">Data Analyst</h3>
+                          <span class="text-sm text-gray-400">May 2023 - Abr 2024</span>
+                    </div>
+                    <p class="text-lg font-semibold text-white">Virrey Solís IPS</p>
+                    <ul class="text-gray-300 mt-2 list-disc list-inside space-y-1">
+                        <li>Analicé bases de datos en SQL Server para generar informes médicos críticos, incluyendo cuentas de alto costo y programas RIAS (Rutas Integrales de Atención en Salud).</li>
+                        <li>Colaboré en proyectos de investigación científica para universidades, proveyendo y depurando los datos necesarios.</li>
+                        <li>Automaticé dashboards en Power BI para el seguimiento de KPIs clave, como los indicadores de enfermedades infecciosas.</li>
+                    </ul>
+                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Smith Alvares (Ingeniero BI Líder) - <a href="tel:+573108968957" class="text-sky-400 hover:underline">310 8968957</a></p>
+                </div>
+                <div class="experience-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-sky-400 mb-2">Rappi</h3>
+                    <div class="pl-4 border-l-2 border-gray-600 space-y-4">
+                        <div>
+                            <p class="text-lg font-semibold text-white">Reporting Analyst finances</p>
+                            <span class="text-sm text-gray-400">Sept 2022 - Mar 2023</span>
+                            <p class="text-gray-300 mt-1 text-sm">Ejecuté procesos de conciliación bancaria para operaciones en múltiples países (Costa Rica, Perú, Argentina) utilizando análisis SQL en la plataforma cloud Snowflake. Fui responsable de los cierres financieros mensuales, garantizando la precisión y puntualidad de los reportes. Coordiné auditorías internas con los equipos de Contabilidad y Tesorería para asegurar la integridad de los datos financieros.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Farmer</p>
+                            <span class="text-sm text-gray-400">Jun 2022 - Sept 2022</span>
+                             <p class="text-gray-300 mt-1 text-sm">Gestioné y expandí una cartera de 120 cuentas clave, colaborando estrechamente con equipos de datos para optimizar los procesos de venta y superar las métricas establecidas.</p>
+                        </div>
+                         <div>
+                            <p class="text-lg font-semibold text-white">Key Account Manager</p>
+                            <span class="text-sm text-gray-400">Sept 2021 - Jun 2022</span>
+                            <p class="text-gray-300 mt-1 text-sm">Fui responsable de la gestión y el crecimiento de una cartera de 200 cuentas estratégicas, desarrollando relaciones a largo plazo y asegurando la consecución de los objetivos de negocio.</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Sebastian Vargas - <a href="tel:+573144923236" class="text-sky-400 hover:underline">314 4923236</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Educación</h2>
+            <div class="max-w-3xl mx-auto relative education-timeline">
+                <div class="timeline-item pb-8">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-sky-400">Ingeniería de Sistemas (En curso)</h3>
+                    <p class="text-md font-semibold text-white">Corporación Unificada Nacional de Educación Superior (CUN)</p>
+                    <p class="text-md font-semibold text-white">Actualmente en 4º semestre.</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-2 space-y-2">
+                        <li><span class="font-bold text-purple-400">Al finalizar 4º semestre:</span> Técnico en Soporte de Sistemas.</li>
+                        <li><span class="font-bold text-purple-400">Al finalizar 7º semestre:</span> Tecnólogo en Desarrollo de Software.</li>
+                        <li><span class="font-bold text-purple-400">Al finalizar 10º semestre:</span> Ingeniero de Sistemas.</li>
+                    </ul>
+                </div>
+                 <div class="timeline-item pb-8">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-sky-400">Intereses Futuros</h3>
+                     <p class="text-gray-300 mt-2">Tengo un gran interés en realizar una especialización en <span class="font-bold text-purple-400">Inteligencia Artificial</span> al finalizar mi carrera.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-sky-400">Bachiller Académico</h3>
+                    <p class="text-md font-semibold text-white">Colegio Colombo Irlandés</p>
+                    <p class="text-sm text-gray-400">Graduado en 2015</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="glass-container">
+             <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Tecnologías y Normas</h2>
+             <div class="max-w-4xl mx-auto space-y-8">
+                 <div>
+                     <h3 class="text-xl font-bold text-sky-400 mb-4">Lenguajes y Herramientas</h3>
+                     <div class="flex flex-wrap gap-3">
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">HTML</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">CSS</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">JavaScript</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">TypeScript</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Python</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">SQL</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Node.js</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">npm</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Handlebars</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Zod</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Power BI</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Looker Studio</span>
+                     </div>
+                 </div>
+                 <div>
+                     <h3 class="text-xl font-bold text-sky-400 mb-4">Librerías y Frameworks</h3>
+                     <div class="flex flex-wrap gap-3">
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">React</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Next.js</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Tailwind CSS</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ShadCN UI</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Lucide React</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">React Hook Form</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Recharts</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Pandas</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Twilio</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ngrok</span>
+                     </div>
+                 </div>
+                 <div>
+                     <h3 class="text-xl font-bold text-sky-400 mb-4">IA, Cloud y Plataformas</h3>
+                     <div class="flex flex-wrap gap-3">
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Google Cloud</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">AWS</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Firebase</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Genkit</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ChatGPT</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Gemini</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Claude</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Deepseek</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Leonardo</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Midjourney</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Runway</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Sora</span>
+                     </div>
+                 </div>
+                 <div>
+                     <h3 class="text-xl font-bold text-sky-400 mb-4">Conocimiento de Normas</h3>
+                     <div class="flex flex-wrap gap-3">
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ISO/IEC 27001</span>
+                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ISO/IEC 27002</span>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <div class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center section-title">Licencias y Certificaciones</h2>
+            <div id="certifications" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+                </div>
+        </div>
+
+        <div id="payment-section" class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Zona de Pagos y Donaciones</h2>
+            
+            <div class="max-w-md mx-auto mb-8">
+                <label for="amount-input" class="block text-lg font-medium text-sky-300 mb-2 text-center">Selecciona o ingresa un monto (USD)</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 text-lg">$</span>
+                    <input type="number" id="amount-input" class="w-full bg-gray-900/70 border-2 border-gray-600 rounded-lg pl-8 pr-4 py-3 text-lg text-center focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="25.00">
+                </div>
+                <div class="grid grid-cols-3 gap-4 mt-4">
+                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="10">$10</button>
+                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="25">$25</button>
+                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="50">$50</button>
+                </div>
+            </div>
+
+            <div id="payment-container">
+                <div id="card-ui-container">
+                    <div class="card-face card-front">
+                        <div class="card-header">
+                            <div class="card-chip"></div>
+                            <div class="card-logo">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div id="card-ui-number" class="card-number">
+                            #### #### #### ####
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <div class="text-gray-300 text-xs">Card Holder</div>
+                                <div id="card-ui-name">NOMBRE COMPLETO</div>
+                            </div>
+                            <div>
+                                <div class="text-gray-300 text-xs">Expires</div>
+                                <div id="card-ui-expiry">MM/YY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="black-strip"></div>
+                        <div class="text-right text-xs mb-2">CVV</div>
+                        <div class="cvv-box">
+                            <span id="card-ui-cvv"></span>
+                        </div>
+                        <div class="mt-auto text-xs text-center">
+                            Esta tarjeta es propiedad del banco emisor. Su uso está sujeto a los términos y condiciones del acuerdo del titular de la tarjeta.
+                        </div>
+                    </div>
+                </div>
+                <div id="payment-form-container">
+                    <h3 class="text-xl font-semibold text-white mb-6">Detalles del Pago</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="card-number-input" class="block text-sm font-medium text-gray-300 mb-1">Número de Tarjeta</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="card-number-input" class="payment-form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                <i id="card-brand-icon" class="fab fa-cc-visa card-brand-icon"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="card-name-input" class="block text-sm font-medium text-gray-300 mb-1">Nombre del Titular</label>
+                            <input type="text" id="card-name-input" class="payment-form-input" placeholder="Camilo A. Serrano S.">
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1/2">
+                                <label for="card-expiry-input" class="block text-sm font-medium text-gray-300 mb-1">Expiración</label>
+                                <input type="text" id="card-expiry-input" class="payment-form-input" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="card-cvv-input" class="block text-sm font-medium text-gray-300 mb-1">CVV</label>
+                                <input type="password" id="card-cvv-input" class="payment-form-input" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="pt-4 space-y-3">
+                             <button type="button" id="confirm-payment-btn" class="w-full btn-shine bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                                 <span>Confirmar y Pagar $25.00</span>
+                             </button>
+                             <button type="button" class="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                                 Cancelar
+                             </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="component-gallery" class="glass-container">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Portafolio de Componentes Disponibles</h2>
+            <p class="text-center text-gray-400 mb-12">Una biblioteca interactiva de estilos y efectos. Haz clic en "Ver Código" para copiar y pegar.</p>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Paleta de Colores Interactiva</h3>
+                <div id="color-picker-container">
+                    <div id="color-wheel-container">
+                        <canvas id="color-wheel"></canvas>
+                        <div id="color-picker-indicator"></div>
+                    </div>
+                    <div id="color-details">
+                        <div id="color-preview"></div>
+                        <div class="color-input-group">
+                            <label for="hex-input">HEX</label>
+                            <input type="text" id="hex-input" readonly>
+                        </div>
+                        <div class="color-input-group">
+                            <label for="rgb-input">RGB</label>
+                            <input type="text" id="rgb-input" readonly>
+                        </div>
+                        <div class="color-input-group">
+                            <label for="hsl-input">HSL</label>
+                            <input type="text" id="hsl-input" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Gráficos para Análisis</h3>
+                <input type="text" id="search-charts" placeholder="Buscar gráfico..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="charts-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Tipografía</h3>
+                <input type="text" id="search-typography" placeholder="Buscar tipografía..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="typography-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Efectos de Título</h3>
+                <input type="text" id="search-title-effects" placeholder="Buscar efectos de título..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="title-effects-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Efectos Especiales</h3>
+                <input type="text" id="search-effects" placeholder="Buscar efectos especiales..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="effects-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Botones Funcionales</h3>
+                <input type="text" id="search-buttons" placeholder="Buscar botones..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="buttons-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center"></div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Botones de Redes Sociales</h3>
+                <input type="text" id="search-social-buttons" placeholder="Buscar red social..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <div id="social-buttons-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-4">
+        <div class="footer-fire max-w-3xl mx-auto">
+            <p class="footer-scanner-effect text-lg font-semibold">&copy; 2025 Camilo Andres Serrano Sanchez. Todos los derechos reservados.</p>
+            <p class="footer-scanner-effect text-base mt-2 font-semibold">Desarrollado por Ingeniero Camilo Andres Serrano Sanchez con <i class="fas fa-heart text-pink-500"></i> y mucho <i class="fas fa-coffee text-amber-600"></i>.</p>
+        </div>
+    </footer>
+
+    <div id="certification-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-6 relative transform scale-95 border border-purple-500">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times fa-2x"></i>
+            </button>
+            <div id="modal-body" class="text-center"></div>
+        </div>
+    </div>
+
+    <div id="login-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-gray-900 rounded-2xl shadow-2xl w-full max-w-sm p-8 relative transform scale-95 border border-indigo-500">
+            <button id="close-login-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-center mb-6 section-title">Iniciar Sesión</h3>
+            <form class="space-y-6">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Usuario</label>
+                    <input type="text" name="username" id="username" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="tu-usuario">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Contraseña</label>
+                    <input type="password" name="password" id="password" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="••••••••">
+                </div>
+                <button type="button" class="w-full btn-shine bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg">
+                    Acceder
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <svg class="absolute w-0 h-0">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+            <filter id="liquid-filter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -7" result="goo" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="1" result="warp" />
+                <feDisplacementMap in="goo" in2="warp" scale="50" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="pixel-sort-filter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                <feColorMatrix in="blur" type="saturate" values="2" result="saturate" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="1" result="warp" />
+                <feDisplacementMap in="saturate" in2="warp" scale="20" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
