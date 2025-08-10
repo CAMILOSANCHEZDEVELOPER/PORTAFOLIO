@@ -104,6 +104,7 @@ export const socialButtons = [
 ];
 
 export const effects = [
+    // --- TUS EFECTOS ANTERIORES ---
     { name: 'Borde Neón', html: '<div class="card card-neon-border flex justify-center items-center p-4"><h3 class="text-xl font-bold">Borde Neón</h3></div>', css: ".card-neon-border { ... }" },
     { name: 'Parallax', html: '<div class="card card-parallax relative"><img src="https://placehold.co/220x280/1f2937/FFFFFF?text=Fondo" class="card-image w-full h-full object-cover absolute rounded-lg" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/1f2937/FFFFFF?text=Error\'"><h3 class="card-title text-2xl font-black text-white absolute bottom-4 left-4">PARALLAX</h3></div>', css: ".card-parallax { ... }" },
     { name: 'Cristal (Glass)', html: '<div class="card card-glass flex justify-center items-center p-4"><h3 class="text-xl font-bold">Cristal</h3></div>', css: ".card-glass { ... }" },
@@ -141,7 +142,50 @@ export const effects = [
     { name: 'Rastro de Imagen', html: '<div class="card card-image-trail flex justify-center items-center"><img src="https://placehold.co/100x100/34d399/FFFFFF?text=ICON" class="trail-img w-24 h-24" onerror="this.onerror=null;this.src=\'https://placehold.co/100x100/34d399/FFFFFF?text=Error\'"><img src="https://placehold.co/100x100/34d399/FFFFFF?text=ICON" class="trail-img w-24 h-24" onerror="this.onerror=null;this.src=\'https://placehold.co/100x100/34d399/FFFFFF?text=Error\'"><img src="https://placehold.co/100x100/34d399/FFFFFF?text=ICON" class="w-24 h-24 relative" onerror="this.onerror=null;this.src=\'https://placehold.co/100x100/34d399/FFFFFF?text=Error\'"></div>', css: '.card-image-trail { ... }' },
     { name: 'Rejilla Revelada', html: '<div class="card card-grid-reveal grid grid-cols-5 grid-rows-5 p-0"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>', css: '.card-grid-reveal { ... }' },
     { name: 'Texto Perspectiva', html: '<div class="card card-perspective-text flex justify-center items-center"><h3 class="text-3xl font-black">Perspectiva</h3></div>', css: '.card-perspective-text { ... }' },
-    { name: 'Preview Video', html: '<div class="card card-video-preview p-0"><video autoplay loop muted class="w-full h-full object-cover" style="filter: grayscale(100%) blur(5px);"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video></div>', css: '.card-video-preview { ... }' }
+    { name: 'Preview Video', html: '<div class="card card-video-preview p-0"><video autoplay loop muted class="w-full h-full object-cover" style="filter: grayscale(100%) blur(5px);"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video></div>', css: '.card-video-preview { ... }' },
+
+    // --- NUEVOS EFECTOS TECNOLÓGICOS ---
+    { 
+        name: 'Texto con Glitch', 
+        html: '<div class="glitch-text" data-text="FUTURO">FUTURO</div>',
+        css: ".glitch-text { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Orbe Pulsante', 
+        html: '<div class="pulsing-orb"></div>',
+        css: ".pulsing-orb { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Tarjeta 3D Interactiva', 
+        html: '<div class="card-3d-container"><div class="card-3d"><div class="card-3d-content">3D</div></div></div>',
+        css: ".card-3d-container { ... } /* Añadido a styles.css */",
+        js: "// Requiere JS para el seguimiento del ratón. Está en main.js"
+    },
+    { 
+        name: 'Botón Holográfico', 
+        html: '<button class="holographic-btn">Holograma</button>',
+        css: ".holographic-btn { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Rejilla con Escáner', 
+        html: '<div class="scanning-grid"></div>',
+        css: ".scanning-grid { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Cubos Flotantes 3D', 
+        html: '<div class="cubes-container"><div class="cube"><div class="face front"></div><div class="face back"></div><div class="face right"></div><div class="face left"></div><div class="face top"></div><div class="face bottom"></div></div></div>',
+        css: ".cubes-container { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Visualizador de Audio', 
+        html: '<div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>',
+        css: ".visualizer { ... } /* Añadido a styles.css */"
+    },
+    { 
+        name: 'Interruptor Futurista', 
+        html: '<div class="switch-container"><label for="tech-switch-demo">ESTADO</label><label class="switch"><input type="checkbox" id="tech-switch-demo"><span class="slider"></span></label></div>',
+        css: ".switch-container { ... } /* Añadido a styles.css */"
+    }
 ];
 
 export const certificationsData = [
