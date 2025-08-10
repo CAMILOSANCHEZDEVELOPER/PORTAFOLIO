@@ -677,3 +677,69 @@ body::before {
     border-radius: 1rem;
     margin-top: 2rem;
 }
+
+/* --- ESTILOS PARA LA NUEVA GALERÍA DE EFECTOS TECNOLÓGICOS --- */
+
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+.neon-text { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff; }
+
+/* --- Efecto 1: Glitch Text --- */
+.glitch-text { font-size: 2rem; font-weight: 700; font-family: 'Orbitron', sans-serif; position: relative; color: white; }
+.glitch-text::before, .glitch-text::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1f2937; overflow: hidden; }
+.glitch-text::before { left: 2px; text-shadow: -2px 0 #ff00c1; animation: glitch-anim-1 2s infinite linear reverse; }
+.glitch-text::after { left: -2px; text-shadow: -2px 0 #00ffff; animation: glitch-anim-2 2s infinite linear reverse; }
+@keyframes glitch-anim-1 { 0%, 100% { clip-path: inset(0 0 98% 0); } 20% { clip-path: inset(20% 0 50% 0); } 40% { clip-path: inset(40% 0 30% 0); } 60% { clip-path: inset(60% 0 10% 0); } 80% { clip-path: inset(80% 0 5% 0); } }
+@keyframes glitch-anim-2 { 0%, 100% { clip-path: inset(98% 0 0 0); } 20% { clip-path: inset(50% 0 20% 0); } 40% { clip-path: inset(30% 0 40% 0); } 60% { clip-path: inset(10% 0 60% 0); } 80% { clip-path: inset(5% 0 80% 0); } }
+
+/* --- Efecto 2: Matrix Rain --- */
+.matrix-canvas { width: 100%; height: 100%; background-color: #000; }
+
+/* --- Efecto 3: Pulsing Orb --- */
+.pulsing-orb { width: 80px; height: 80px; background: radial-gradient(circle, #00ffff, #00aaff); border-radius: 50%; box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00aaff; animation: pulse 3s infinite ease-in-out; }
+@keyframes pulse { 0%, 100% { transform: scale(0.95); } 50% { transform: scale(1.05); } }
+
+/* --- Efecto 4: 3D Card --- */
+.card-3d-container { perspective: 1000px; }
+.card-3d { width: 100%; height: 150px; background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 193, 0.1)); border-radius: 1rem; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: #fff; font-family: 'Orbitron', sans-serif; transition: transform 0.1s linear; transform-style: preserve-3d; }
+.card-3d-content { transform: translateZ(40px); text-shadow: 0 0 10px #00ffff; }
+
+/* --- Efecto 5: Cyber Lines --- */
+.cyber-lines-canvas { width: 100%; height: 100%; }
+
+/* --- Efecto 7: Holographic Button --- */
+.holographic-btn { position: relative; padding: 0.75rem 1.5rem; border: 1px solid #00ffff; color: #00ffff; background: transparent; font-family: 'Orbitron', sans-serif; text-transform: uppercase; overflow: hidden; }
+.holographic-btn:hover { color: #0a0a1a; background-color: #00ffff; box-shadow: 0 0 20px #00ffff; }
+.holographic-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.5), transparent); transition: left 0.5s; }
+.holographic-btn:hover::before { left: 100%; }
+
+/* --- Efecto 9: Scanning Grid --- */
+.scanning-grid { width: 100%; height: 150px; background-size: 30px 30px; background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px); position: relative; overflow: hidden; }
+.scanning-grid::before { content: ''; position: absolute; top: -100%; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 0%, #00ffff 50%, transparent 100%); animation: scan 4s linear infinite; opacity: 0.3; }
+@keyframes scan { 0% { top: -100%; } 100% { top: 200%; } }
+
+/* --- Efecto 11: Floating Cubes --- */
+.cubes-container { perspective: 800px; width: 100%; height: 150px; }
+.cube { width: 30px; height: 30px; position: absolute; transform-style: preserve-3d; animation: rotate-cube 20s infinite linear; }
+.cube .face { position: absolute; width: 30px; height: 30px; border: 1px solid #00ffff; background: rgba(0, 255, 255, 0.1); }
+.face.front  { transform: translateZ(15px); }
+.face.back   { transform: rotateY(180deg) translateZ(15px); }
+.face.right  { transform: rotateY(90deg) translateZ(15px); }
+.face.left   { transform: rotateY(-90deg) translateZ(15px); }
+.face.top    { transform: rotateX(90deg) translateZ(15px); }
+.face.bottom { transform: rotateX(-90deg) translateZ(15px); }
+@keyframes rotate-cube { from { transform: rotateX(0) rotateY(0); } to { transform: rotateX(360deg) rotateY(360deg); } }
+
+/* --- Efecto 12: Audio Visualizer --- */
+.visualizer { display: flex; justify-content: center; align-items: flex-end; height: 80px; gap: 4px; }
+.visualizer .bar { width: 8px; background: #00ffff; animation: visualize 1.5s infinite ease-in-out alternate; }
+@keyframes visualize { 0% { transform: scaleY(0.1); } 100% { transform: scaleY(1); } }
+
+/* --- Efecto 14: Futuristic Switch --- */
+.switch-container { display: flex; align-items: center; gap: 10px; }
+.switch-container .switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+.switch-container .switch input { opacity: 0; width: 0; height: 0; }
+.switch-container .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 34px; border: 1px solid #555; }
+.switch-container .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+.switch-container input:checked + .slider { background-color: #00ffff; box-shadow: 0 0 15px #00ffff; }
+.switch-container input:checked + .slider:before { transform: translateX(26px); }
+.switch-container label { color: #00ffff; font-family: 'Orbitron'; }
