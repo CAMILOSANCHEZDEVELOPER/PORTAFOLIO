@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuentes para la galería -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato&family=Montserrat&family=Oswald&family=Raleway&family=Merriweather&family=Nunito&family=Playfair+Display&family=Poppins&family=Open+Sans&family=Ubuntu&family=Source+Code+Pro&family=Lobster&family=Pacifico&family=Bebas+Neue&family=Anton&family=Dancing+Script&family=Shadows+Into+Light&family=Caveat&family=Indie+Flower&family=Press+Start+2P&family=Special+Elite&family=Sacramento&family=Orbitron&family=Cinzel&family=Architects+Daughter&family=Kalam&family=Zeyada&family=Major+Mono+Display&family=Homemade+Apple&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fuente principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Chart.js para la nueva galería de gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -23,13 +23,12 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Base oscura sólida */
+            background-color: #1a202c; 
             color: #f3f4f6;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Efecto Aurora de fondo */
         body::before {
             content: '';
             position: fixed;
@@ -37,24 +36,26 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at 10% 20%, rgba(167, 139, 250, 0.25), transparent 40%),
-                        radial-gradient(circle at 80% 90%, rgba(56, 189, 248, 0.25), transparent 40%),
-                        radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.2), transparent 40%);
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(167, 139, 250, 0.45), transparent 40%),
+                radial-gradient(circle at 80% 90%, rgba(56, 189, 248, 0.45), transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.4), transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(8, 217, 214, 0.35), transparent 45%);
             background-size: 100% 100%;
-            animation: aurora-flow 20s ease-in-out infinite alternate;
+            animation: aurora-flow 16s ease-in-out infinite alternate;
             z-index: -1;
             will-change: transform;
         }
 
         @keyframes aurora-flow {
             0% {
-                transform: rotate(0deg) scale(1.2);
-                filter: blur(30px);
+                transform: rotate(0deg) scale(1.5);
+                filter: blur(40px);
                 opacity: 0.8;
             }
             100% {
-                transform: rotate(360deg) scale(1.6);
-                filter: blur(50px);
+                transform: rotate(360deg) scale(2.0);
+                filter: blur(60px);
                 opacity: 1;
             }
         }
@@ -80,7 +81,7 @@
         }
         
         .glass-container {
-             background: rgba(17, 24, 39, 0.7);
+             background: rgba(45, 55, 72, 0.65);
              backdrop-filter: blur(12px);
              -webkit-backdrop-filter: blur(12px);
              border: 1px solid rgba(255, 255, 255, 0.1);
@@ -93,12 +94,12 @@
             width: 100%;
             max-width: 320px;
             min-height: 280px;
-            background-color: #1f2937;
+            background-color: #2d3748;
             border-radius: 1rem;
             overflow: hidden;
             position: relative;
             transition: all 0.3s ease;
-            border: 1px solid #374151;
+            border: 1px solid #4a5568;
         }
 
         .card-lift:hover {
@@ -108,14 +109,14 @@
         }
         
         .experience-card, .project-card {
-            background-color: rgba(31, 41, 55, 0.5);
+            background-color: rgba(71, 85, 105, 0.5);
             border-left: 4px solid #38bdf8;
             transition: all 0.3s ease;
         }
         .experience-card:hover, .project-card:hover {
             transform: translateX(10px);
             border-left-color: #f472b6;
-            background-color: rgba(31, 41, 55, 0.8);
+            background-color: rgba(71, 85, 105, 0.8);
         }
 
         .education-timeline::before {
@@ -125,7 +126,7 @@
             top: 1rem;
             bottom: 1rem;
             width: 2px;
-            background-color: #374151;
+            background-color: #4a5568;
         }
         .timeline-item { position: relative; padding-left: 3rem; }
         .timeline-dot {
@@ -135,7 +136,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background-color: #111827;
+            background-color: #1a202c;
             border: 4px solid #38bdf8;
             transition: all 0.3s ease;
         }
@@ -145,12 +146,12 @@
         }
         
         .tech-tag {
-            background-color: rgba(55, 65, 81, 0.7);
+            background-color: rgba(71, 85, 105, 0.7);
             transition: all 0.2s ease;
         }
         .tech-tag:hover {
             background-color: #38bdf8;
-            color: #111827;
+            color: #1a202c;
             transform: scale(1.1);
         }
 
@@ -163,7 +164,7 @@
 
         /* Estilos para la galería de componentes */
         .component-display {
-            background-color: rgba(17, 24, 39, 0.5);
+            background-color: rgba(26, 32, 44, 0.5);
             border-radius: 0.75rem;
             padding: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -174,7 +175,7 @@
         }
         .code-snippet {
             display: none;
-            background-color: #0c111d;
+            background-color: #111827;
             border-radius: 0.5rem;
             padding: 1rem;
             margin-top: 1rem;
@@ -189,7 +190,7 @@
         }
         .code-snippet.show { display: block; }
         .copy-btn {
-            background-color: #374151;
+            background-color: #4a5568;
             color: #d1d5db;
             transition: all 0.2s;
         }
@@ -225,10 +226,10 @@
         .btn-svg-draw rect { stroke: #38bdf8; stroke-width: 4; stroke-dasharray: 400; stroke-dashoffset: 400; transition: stroke-dashoffset 0.8s ease; }
         .btn-svg-draw:hover rect { stroke-dashoffset: 0; }
         .btn-glitch { position: relative; }
-        .btn-glitch:hover::before, .btn-glitch:hover::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #111827; }
+        .btn-glitch:hover::before, .btn-glitch:hover::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1a202c; }
         .btn-glitch:hover::before { left: 2px; text-shadow: -1px 0 red; animation: glitch-anim 1s infinite linear alternate-reverse; }
         .btn-glitch:hover::after { left: -2px; text-shadow: -1px 0 blue; animation: glitch-anim 1s infinite linear alternate-reverse; animation-delay: -0.5s; }
-        .btn-gradient-border { background: #111827; position: relative; z-index: 1; }
+        .btn-gradient-border { background: #1a202c; position: relative; z-index: 1; }
         .btn-gradient-border::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, #f472b6, #a78bfa, #38bdf8); z-index: -1; border-radius: 10px; transition: all 0.3s; opacity: 0; }
         .btn-gradient-border:hover::before { opacity: 1; filter: blur(5px); }
         .btn-cyber { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%); border: 2px solid #08d9d6; transition: background 0.2s; }
@@ -342,7 +343,7 @@
         .card-folding { transform-style: preserve-3d; }
         .card-folding .fold { width: 50%; height: 100%; position: absolute; top: 0; left: 50%; background-color: #2dd4bf; transform-origin: left; transition: transform 0.6s; }
         .card-folding:hover .fold { transform: rotateY(-160deg); }
-        .card-peel::before { content: ''; position: absolute; bottom: 0; right: 0; border-width: 0 0 50px 50px; border-style: solid; border-color: transparent transparent #111827 transparent; transition: border-width 0.3s; }
+        .card-peel::before { content: ''; position: absolute; bottom: 0; right: 0; border-width: 0 0 50px 50px; border-style: solid; border-color: transparent transparent #1a202c transparent; transition: border-width 0.3s; }
         .card-peel:hover::before { border-width: 0 0 100px 100px; }
         .card-glitch-img .glitch-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: inherit; background-size: cover; }
         .card-glitch-img:hover .glitch-layer:nth-child(1) { transform: translate(5px, 2px); opacity: 0.8; clip-path: polygon(0 20%, 100% 20%, 100% 25%, 0 25%); animation: card-glitch1 0.5s infinite; }
@@ -356,8 +357,8 @@
         .card-3d-flip .card-front, .card-3d-flip .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
         .card-3d-flip .card-back { transform: rotateY(180deg); }
         .card-3d-flip:hover { transform: rotateY(180deg); }
-        .card-border-shift { background-color: rgba(31, 41, 55, 0.5); border-left: 4px solid #38bdf8; transition: all 0.3s ease; }
-        .card-border-shift:hover { transform: translateX(10px); border-left-color: #f472b6; background-color: rgba(31, 41, 55, 0.8); }
+        .card-border-shift { background-color: rgba(71, 85, 105, 0.5); border-left: 4px solid #38bdf8; transition: all 0.3s ease; }
+        .card-border-shift:hover { transform: translateX(10px); border-left-color: #f472b6; background-color: rgba(71, 85, 105, 0.8); }
         @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .card-mask-hover:hover div { clip-path: circle(75% at 50% 50%); }
         .card-grain { position: absolute; inset: -200%; width: 400%; height: 400%; background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Film_grain.png'); opacity: 0.15; animation: grain 8s steps(10) infinite; pointer-events: none; }
@@ -376,7 +377,7 @@
         .card-text-focus:hover .unfocused { filter: blur(2px); opacity: 0.5; }
         .card-text-focus .focused { transition: transform 0.3s; }
         .card-text-focus:hover .focused { transform: scale(1.1); }
-        .card-cutout-window { background-image: url('https://placehold.co/320x280/111827/FFFFFF?text=Fondo'); background-size: cover; }
+        .card-cutout-window { background-image: url('https://placehold.co/320x280/1a202c/FFFFFF?text=Fondo'); background-size: cover; }
         .card-cutout-window .window { clip-path: circle(30px at 50% 50%); transition: clip-path 0.4s ease-in-out; }
         .card-cutout-window:hover .window { clip-path: circle(150px at 50% 50%); }
         .card-image-trail { --trail-opacity: 0; }
@@ -429,7 +430,7 @@
             mix-blend-mode: difference;
         }
         #color-details {
-            background-color: rgba(17, 24, 39, 0.5);
+            background-color: rgba(26, 32, 44, 0.5);
             padding: 1.5rem;
             border-radius: 0.75rem;
             width: 100%;
@@ -440,7 +441,7 @@
             height: 80px;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
-            border: 2px solid #374151;
+            border: 2px solid #4a5568;
             transition: background-color 0.2s;
         }
         .color-input-group {
@@ -455,8 +456,8 @@
             color: #9ca3af;
         }
         .color-input-group input {
-            background: #374151;
-            border: 1px solid #4b5563;
+            background: #4a5568;
+            border: 1px solid #718096;
             border-radius: 0.375rem;
             padding: 0.5rem 0.75rem;
             color: #f3f4f6;
@@ -495,7 +496,7 @@
             animation: glitch-main 5s infinite linear;
         }
         .title-glitch-effect::before, .title-glitch-effect::after {
-            content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1f2937; overflow: hidden;
+            content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1a202c; overflow: hidden;
         }
         .title-glitch-effect::before { left: 2px; text-shadow: -2px 0 #f472b6; animation: glitch-before 5s infinite linear; }
         .title-glitch-effect::after { left: -2px; text-shadow: -2px 0 #38bdf8, 2px 2px #facc15; animation: glitch-after 5s infinite linear; }
@@ -526,7 +527,7 @@
             animation: spotlight-scan-anim 4s linear infinite;
         }
         .title-spotlight-scan {
-            font-size: 2.5rem; font-weight: 800; 
+            font-size: 2.5rem; font-weight: 800;  
             background-image: linear-gradient(90deg, #6b7280, white, #6b7280);
         }
         .footer-scanner-effect {
@@ -655,7 +656,7 @@
             text-transform: uppercase;
         }
         #payment-form-container {
-            background-color: rgba(31, 41, 55, 0.7);
+            background-color: rgba(71, 85, 105, 0.7);
             padding: 2rem;
             border-radius: 1rem;
             width: 100%;
@@ -663,8 +664,8 @@
         }
         .payment-form-input {
             width: 100%;
-            background: #374151;
-            border: 1px solid #4b5563;
+            background: #4a5568;
+            border: 1px solid #718096;
             border-radius: 0.375rem;
             padding: 0.75rem;
             color: #f3f4f6;
@@ -687,7 +688,7 @@
             color: #9ca3af;
         }
         .footer-fire {
-            background-color: rgba(17, 24, 39, 0.8);
+            background-color: rgba(26, 32, 44, 0.8);
             padding: 1.5rem;
             border-radius: 1rem;
             margin-top: 2rem;
@@ -703,36 +704,41 @@
         </button>
     </div>
 
-    <header class="text-center my-8 sm:my-12">
-        <img src="https://raw.githubusercontent.com/CAMILOSANCHEZDEVELOPER/GAME-JAMES-BOND-EN-EL-ESPACIO/main/camilo.png" alt="Foto de Perfil" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-purple-500 shadow-lg">
-        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold main-title">Camilo Andres Serrano Sanchez</h1>
-        <p class="text-lg text-gray-300 mt-6 max-w-2xl mx-auto">Desarrollador Full-Stack y Analista de Datos apasionado por construir soluciones tecnológicas y extraer valor de la información.</p>
-        
-        <!-- Datos de Contacto Actualizados -->
-        <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-x-6 gap-y-3 text-gray-300">
-            <a href="mailto:camilosanchezme@gmail.com" class="hover:text-white transition-colors flex items-center gap-2">
-                <i class="fas fa-envelope text-sky-400"></i>
-                camilosanchezme@gmail.com
-            </a>
-            <a href="https://wa.me/573209415494" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
-                <i class="fab fa-whatsapp text-green-400"></i>
-                +57 3209415494
-                <span class="ml-2 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full animate-pulse">¡Escríbeme!</span>
-            </a>
+    <!-- MODIFICADO: Nuevo Encabezado -->
+    <header class="text-center my-8 sm:my-12 relative overflow-hidden rounded-2xl py-10 md:py-16 glass-container">
+        <canvas id="title-particles-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+        <div class="relative z-10 flex flex-col items-center gap-4">
+             <i class="fas fa-palette fa-3x text-purple-400"></i>
+            <h1 class="text-4xl sm:text-5xl font-black text-white">
+                Ingeniero Camilo Andres Serrano Sanchez
+            </h1>
+             <h2 class="text-3xl sm:text-4xl main-title font-bold">Galería de Arte</h2>
+            <p class="text-lg text-gray-300 mt-2 max-w-2xl mx-auto">Desarrollador Full-Stack y Analista de Datos apasionado por construir soluciones tecnológicas y extraer valor de la información.</p>
+            
+            <div class="mt-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-gray-200">
+                <a href="mailto:camilosanchezme@gmail.com" class="hover:text-white transition-colors flex items-center gap-2 text-lg">
+                    <i class="fas fa-envelope text-sky-400"></i>
+                    camilosanchezme@gmail.com
+                </a>
+                <a href="https://wa.me/573209415494" target="_blank" class="hover:text-white transition-colors flex items-center gap-2 text-lg">
+                    <i class="fab fa-whatsapp text-green-400"></i>
+                    +57 3209415494
+                </a>
+            </div>
+
+            <div class="mt-6 flex justify-center items-center gap-4">
+                <a href="https://www.linkedin.com/in/camilo-serrano-sanchez-/" target="_blank" class="btn-social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <img src="https://raw.githubusercontent.com/CAMILOSANCHEZDEVELOPER/GAME-JAMES-BOND-EN-EL-ESPACIO/main/camilo.png" alt="Foto de Perfil" class="w-12 h-12 rounded-full border-2 border-purple-500 shadow-lg">
+                <a href="#" class="btn-shine bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center gap-2">
+                    <i class="fas fa-download"></i>
+                    Descargar CV
+                </a>
+            </div>
         </div>
-        
-        <p class="text-md text-gray-400 mt-4">28 años (Nacido en 1997)</p>
-         <div class="mt-8 flex justify-center items-center gap-6 flex-wrap">
-              <!-- Link de LinkedIn Corregido -->
-              <a href="https://www.linkedin.com/in/camilo-serrano-sanchez-/" target="_blank" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
-              <a href="https://wa.me/573209415494" target="_blank" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-whatsapp fa-2x"></i></a>
-              <a href="mailto:camilosanchezme@gmail.com" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
-              <a href="#" class="btn-shine bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg ml-4 inline-flex items-center gap-2">
-                  <i class="fas fa-download"></i>
-                  Descargar CV
-              </a>
-       </div>
     </header>
+
 
     <main class="max-w-7xl mx-auto">
         
@@ -765,256 +771,6 @@
                 </a>
             </div>
         </div>
-
-        <div class="glass-container">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Experiencia Laboral</h2>
-            <div class="space-y-8 max-w-3xl mx-auto">
-                <div class="experience-card p-6 rounded-lg shadow-lg">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <h3 class="text-xl font-bold text-sky-400">Desarrollador y Soporte TI</h3>
-                        <span class="text-sm text-gray-400">Mar 2025 - Presente</span>
-                    </div>
-                    <p class="text-lg font-semibold text-white">SENA</p>
-                    <p class="text-gray-300 mt-2">Participé en el diseño y desarrollo de una aplicación web para la gestión de convocatorias, implementando soluciones con JavaScript, Node.js y React. Adicionalmente, brindé asesoría técnica a equipos multidisciplinarios en áreas de Business Intelligence, IA y desarrollo de software, influyendo en la toma de decisiones estratégicas.</p>
-                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Felipe Herrera Rincon (Líder Equipo DSNFT) - <a href="tel:+573176680060" class="text-sky-400 hover:underline">317 6680060</a></p>
-                </div>
-                <div class="experience-card p-6 rounded-lg shadow-lg">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <h3 class="text-xl font-bold text-sky-400">Business Intelligence Analyst</h3>
-                         <span class="text-sm text-gray-400">May 2024 - Feb 2025</span>
-                    </div>
-                    <p class="text-lg font-semibold text-white">Nicotec</p>
-                    <p class="text-gray-300 mt-2">Automaticé la generación de informes de ventas y KPIs mediante Power BI y SQL. Desarrollé un sistema con IA para el análisis de métricas, logrando una reducción del 40% en el tiempo de análisis y optimizando significativamente la toma de decisiones en la empresa.</p>
-                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Roger Arbey Plazas Gomez (Director) - <a href="tel:+573118716887" class="text-sky-400 hover:underline">311 8716887</a></p>
-                </div>
-                 <div class="experience-card p-6 rounded-lg shadow-lg">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <h3 class="text-xl font-bold text-sky-400">Data Analyst</h3>
-                         <span class="text-sm text-gray-400">May 2023 - Abr 2024</span>
-                    </div>
-                    <p class="text-lg font-semibold text-white">Virrey Solís IPS</p>
-                    <ul class="text-gray-300 mt-2 list-disc list-inside space-y-1">
-                        <li>Analicé bases de datos en SQL Server para generar informes médicos críticos, incluyendo cuentas de alto costo y programas RIAS (Rutas Integrales de Atención en Salud).</li>
-                        <li>Colaboré en proyectos de investigación científica para universidades, proveyendo y depurando los datos necesarios.</li>
-                        <li>Automaticé dashboards en Power BI para el seguimiento de KPIs clave, como los indicadores de enfermedades infecciosas.</li>
-                    </ul>
-                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Smith Alvares (Ingeniero BI Líder) - <a href="tel:+573108968957" class="text-sky-400 hover:underline">310 8968957</a></p>
-                </div>
-                <div class="experience-card p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-sky-400 mb-2">Rappi</h3>
-                    <div class="pl-4 border-l-2 border-gray-600 space-y-4">
-                        <div>
-                            <p class="text-lg font-semibold text-white">Reporting Analyst finances</p>
-                            <span class="text-sm text-gray-400">Sept 2022 - Mar 2023</span>
-                            <p class="text-gray-300 mt-1 text-sm">Ejecuté procesos de conciliación bancaria para operaciones en múltiples países (Costa Rica, Perú, Argentina) utilizando análisis SQL en la plataforma cloud Snowflake. Fui responsable de los cierres financieros mensuales, garantizando la precisión y puntualidad de los reportes. Coordiné auditorías internas con los equipos de Contabilidad y Tesorería para asegurar la integridad de los datos financieros.</p>
-                        </div>
-                        <div>
-                            <p class="text-lg font-semibold text-white">Farmer</p>
-                            <span class="text-sm text-gray-400">Jun 2022 - Sept 2022</span>
-                             <p class="text-gray-300 mt-1 text-sm">Gestioné y expandí una cartera de 120 cuentas clave, colaborando estrechamente con equipos de datos para optimizar los procesos de venta y superar las métricas establecidas.</p>
-                        </div>
-                         <div>
-                            <p class="text-lg font-semibold text-white">Key Account Manager</p>
-                            <span class="text-sm text-gray-400">Sept 2021 - Jun 2022</span>
-                            <p class="text-gray-300 mt-1 text-sm">Fui responsable de la gestión y el crecimiento de una cartera de 200 cuentas estratégicas, desarrollando relaciones a largo plazo y asegurando la consecución de los objetivos de negocio.</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-400 mt-3">Contacto Supervisor: Sebastian Vargas - <a href="tel:+573144923236" class="text-sky-400 hover:underline">314 4923236</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="glass-container">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Educación</h2>
-            <div class="max-w-3xl mx-auto relative education-timeline">
-                <div class="timeline-item pb-8">
-                    <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-sky-400">Ingeniería de Sistemas (En curso)</h3>
-                    <p class="text-md font-semibold text-white">Corporación Unificada Nacional de Educación Superior (CUN)</p>
-                    <p class="text-md font-semibold text-white">Actualmente en 4º semestre.</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 space-y-2">
-                        <li><span class="font-bold text-purple-400">Al finalizar 4º semestre:</span> Técnico en Soporte de Sistemas.</li>
-                        <li><span class="font-bold text-purple-400">Al finalizar 7º semestre:</span> Tecnólogo en Desarrollo de Software.</li>
-                        <li><span class="font-bold text-purple-400">Al finalizar 10º semestre:</span> Ingeniero de Sistemas.</li>
-                    </ul>
-                </div>
-                 <div class="timeline-item pb-8">
-                    <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-sky-400">Intereses Futuros</h3>
-                     <p class="text-gray-300 mt-2">Tengo un gran interés en realizar una especialización en <span class="font-bold text-purple-400">Inteligencia Artificial</span> al finalizar mi carrera.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-sky-400">Bachiller Académico</h3>
-                    <p class="text-md font-semibold text-white">Colegio Colombo Irlandés</p>
-                    <p class="text-sm text-gray-400">Graduado en 2015</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sección de Tecnologías Actualizada -->
-        <div class="glass-container">
-             <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Tecnologías y Normas</h2>
-             <div class="max-w-4xl mx-auto space-y-8">
-                 <div>
-                     <h3 class="text-xl font-bold text-sky-400 mb-4">Lenguajes y Herramientas</h3>
-                     <div class="flex flex-wrap gap-3">
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">HTML</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">CSS</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">JavaScript</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">TypeScript</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Python</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">SQL</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Node.js</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">npm</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Handlebars</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Zod</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Power BI</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Looker Studio</span>
-                     </div>
-                 </div>
-                 <div>
-                     <h3 class="text-xl font-bold text-sky-400 mb-4">Librerías y Frameworks</h3>
-                     <div class="flex flex-wrap gap-3">
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">React</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Next.js</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Tailwind CSS</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ShadCN UI</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Lucide React</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">React Hook Form</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Recharts</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Pandas</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Twilio</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ngrok</span>
-                     </div>
-                 </div>
-                 <div>
-                     <h3 class="text-xl font-bold text-sky-400 mb-4">IA, Cloud y Plataformas</h3>
-                     <div class="flex flex-wrap gap-3">
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Google Cloud</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">AWS</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Firebase</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Genkit</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ChatGPT</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Gemini</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Claude</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Deepseek</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Leonardo</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Midjourney</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Runway</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">Sora</span>
-                     </div>
-                 </div>
-                 <div>
-                     <h3 class="text-xl font-bold text-sky-400 mb-4">Conocimiento de Normas</h3>
-                     <div class="flex flex-wrap gap-3">
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ISO/IEC 27001</span>
-                         <span class="tech-tag font-semibold py-2 px-4 rounded-lg">ISO/IEC 27002</span>
-                     </div>
-                 </div>
-             </div>
-        </div>
-
-        <div class="glass-container">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center section-title">Licencias y Certificaciones</h2>
-            <div id="certifications" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-                <!-- Certificaciones se insertarán aquí dinámicamente -->
-            </div>
-        </div>
-
-        <!-- MODIFICADO: Nueva Sección de Pagos -->
-        <div id="payment-section" class="glass-container">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Zona de Pagos y Donaciones</h2>
-            
-            <!-- Amount Selection -->
-            <div class="max-w-md mx-auto mb-8">
-                <label for="amount-input" class="block text-lg font-medium text-sky-300 mb-2 text-center">Selecciona o ingresa un monto (USD)</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 text-lg">$</span>
-                    <input type="number" id="amount-input" class="w-full bg-gray-900/70 border-2 border-gray-600 rounded-lg pl-8 pr-4 py-3 text-lg text-center focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="25.00">
-                </div>
-                <div class="grid grid-cols-3 gap-4 mt-4">
-                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="10">$10</button>
-                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="25">$25</button>
-                    <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="50">$50</button>
-                </div>
-            </div>
-
-            <div id="payment-container">
-                <!-- Tarjeta de Crédito UI -->
-                <div id="card-ui-container">
-                    <!-- Cara Frontal -->
-                    <div class="card-face card-front">
-                        <div class="card-header">
-                            <div class="card-chip"></div>
-                            <div class="card-logo">
-                                <i class="fa-solid fa-wifi"></i>
-                            </div>
-                        </div>
-                        <div id="card-ui-number" class="card-number">
-                            #### #### #### ####
-                        </div>
-                        <div class="card-footer">
-                            <div>
-                                <div class="text-gray-300 text-xs">Card Holder</div>
-                                <div id="card-ui-name">NOMBRE COMPLETO</div>
-                            </div>
-                            <div>
-                                <div class="text-gray-300 text-xs">Expires</div>
-                                <div id="card-ui-expiry">MM/YY</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Cara Trasera -->
-                    <div class="card-face card-back">
-                        <div class="black-strip"></div>
-                        <div class="text-right text-xs mb-2">CVV</div>
-                        <div class="cvv-box">
-                            <span id="card-ui-cvv"></span>
-                        </div>
-                        <div class="mt-auto text-xs text-center">
-                            Esta tarjeta es propiedad del banco emisor. Su uso está sujeto a los términos y condiciones del acuerdo del titular de la tarjeta.
-                        </div>
-                    </div>
-                </div>
-                <!-- Formulario de Pago -->
-                <div id="payment-form-container">
-                    <h3 class="text-xl font-semibold text-white mb-6">Detalles del Pago</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="card-number-input" class="block text-sm font-medium text-gray-300 mb-1">Número de Tarjeta</label>
-                            <div class="input-wrapper">
-                                <input type="text" id="card-number-input" class="payment-form-input" placeholder="1234 5678 9012 3456" maxlength="19">
-                                <i id="card-brand-icon" class="fab fa-cc-visa card-brand-icon"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="card-name-input" class="block text-sm font-medium text-gray-300 mb-1">Nombre del Titular</label>
-                            <input type="text" id="card-name-input" class="payment-form-input" placeholder="Camilo A. Serrano S.">
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-1/2">
-                                <label for="card-expiry-input" class="block text-sm font-medium text-gray-300 mb-1">Expiración</label>
-                                <input type="text" id="card-expiry-input" class="payment-form-input" placeholder="MM/YY" maxlength="5">
-                            </div>
-                            <div class="w-1/2">
-                                <label for="card-cvv-input" class="block text-sm font-medium text-gray-300 mb-1">CVV</label>
-                                <input type="password" id="card-cvv-input" class="payment-form-input" placeholder="123" maxlength="4">
-                            </div>
-                        </div>
-                        <div class="pt-4 space-y-3">
-                             <button type="button" id="confirm-payment-btn" class="w-full btn-shine bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg">
-                                 <span>Confirmar y Pagar $25.00</span>
-                             </button>
-                             <button type="button" class="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                                 Cancelar
-                             </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
 
         <div id="component-gallery" class="glass-container">
             <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Portafolio de Componentes Disponibles</h2>
@@ -1053,12 +809,6 @@
             </div>
 
             <div class="mb-16">
-                <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Tipografía</h3>
-                <input type="text" id="search-typography" placeholder="Buscar tipografía..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
-                <div id="typography-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            </div>
-
-            <div class="mb-16">
                 <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Efectos de Título</h3>
                 <input type="text" id="search-title-effects" placeholder="Buscar efectos de título..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
                 <div id="title-effects-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -1067,14 +817,108 @@
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Efectos Especiales</h3>
                 <input type="text" id="search-effects" placeholder="Buscar efectos especiales..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
-                <div id="effects-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                <div id="effects-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             </div>
 
-            <div>
+            <div class="mb-16">
                 <h3 class="text-2xl font-bold text-sky-400 mb-6 border-b-2 border-sky-400/50 pb-2">Botones</h3>
                 <input type="text" id="search-buttons" placeholder="Buscar botones..." class="w-full max-w-sm mx-auto block bg-gray-900/70 border border-gray-600 rounded-lg px-4 py-2 mb-8 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
                 <div id="buttons-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center"></div>
             </div>
+
+            <!-- MODIFICADO: Zona de Pagos movida aquí -->
+            <div id="payment-section">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-title">Zona de Pagos y Donaciones</h2>
+                
+                <!-- Amount Selection -->
+                <div class="max-w-md mx-auto mb-8">
+                    <label for="amount-input" class="block text-lg font-medium text-sky-300 mb-2 text-center">Selecciona o ingresa un monto (USD)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 text-lg">$</span>
+                        <input type="number" id="amount-input" class="w-full bg-gray-900/70 border-2 border-gray-600 rounded-lg pl-8 pr-4 py-3 text-lg text-center focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="25.00">
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="10">$10</button>
+                        <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="25">$25</button>
+                        <button class="amount-btn bg-gray-700 hover:bg-sky-500 transition-colors py-2 rounded-lg font-semibold" data-amount="50">$50</button>
+                    </div>
+                </div>
+
+                <div id="payment-container">
+                    <!-- Tarjeta de Crédito UI -->
+                    <div id="card-ui-container">
+                        <!-- Cara Frontal -->
+                        <div class="card-face card-front">
+                            <div class="card-header">
+                                <div class="card-chip"></div>
+                                <div class="card-logo">
+                                    <i class="fa-solid fa-wifi"></i>
+                                </div>
+                            </div>
+                            <div id="card-ui-number" class="card-number">
+                                #### #### #### ####
+                            </div>
+                            <div class="card-footer">
+                                <div>
+                                    <div class="text-gray-300 text-xs">Card Holder</div>
+                                    <div id="card-ui-name">NOMBRE COMPLETO</div>
+                                </div>
+                                <div>
+                                    <div class="text-gray-300 text-xs">Expires</div>
+                                    <div id="card-ui-expiry">MM/YY</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cara Trasera -->
+                        <div class="card-face card-back">
+                            <div class="black-strip"></div>
+                            <div class="text-right text-xs mb-2">CVV</div>
+                            <div class="cvv-box">
+                                <span id="card-ui-cvv"></span>
+                            </div>
+                            <div class="mt-auto text-xs text-center">
+                                Esta tarjeta es propiedad del banco emisor. Su uso está sujeto a los términos y condiciones del acuerdo del titular de la tarjeta.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formulario de Pago -->
+                    <div id="payment-form-container">
+                        <h3 class="text-xl font-semibold text-white mb-6">Detalles del Pago</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="card-number-input" class="block text-sm font-medium text-gray-300 mb-1">Número de Tarjeta</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="card-number-input" class="payment-form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    <i id="card-brand-icon" class="fab fa-cc-visa card-brand-icon"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="card-name-input" class="block text-sm font-medium text-gray-300 mb-1">Nombre del Titular</label>
+                                <input type="text" id="card-name-input" class="payment-form-input" placeholder="Camilo A. Serrano S.">
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-1/2">
+                                    <label for="card-expiry-input" class="block text-sm font-medium text-gray-300 mb-1">Expiración</label>
+                                    <input type="text" id="card-expiry-input" class="payment-form-input" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="w-1/2">
+                                    <label for="card-cvv-input" class="block text-sm font-medium text-gray-300 mb-1">CVV</label>
+                                    <input type="password" id="card-cvv-input" class="payment-form-input" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                            <div class="pt-4 space-y-3">
+                                 <button type="button" id="confirm-payment-btn" class="w-full btn-shine bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                                     <span>Confirmar y Pagar $25.00</span>
+                                 </button>
+                                 <button type="button" class="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                                     Cancelar
+                                 </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -1086,19 +930,9 @@
         </div>
     </footer>
 
-    <!-- Modal de Certificaciones -->
-    <div id="certification-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="modal-content bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-6 relative transform scale-95 border border-purple-500">
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times fa-2x"></i>
-            </button>
-            <div id="modal-body" class="text-center"></div>
-        </div>
-    </div>
-
     <!-- Modal de Login -->
     <div id="login-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="modal-content bg-gray-900 rounded-2xl shadow-2xl w-full max-w-sm p-8 relative transform scale-95 border border-indigo-500">
+        <div class="modal-content bg-gray-800 rounded-2xl shadow-2xl w-full max-w-sm p-8 relative transform scale-95 border border-indigo-500">
             <button id="close-login-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
                 <i class="fas fa-times fa-lg"></i>
             </button>
@@ -1106,11 +940,11 @@
             <form class="space-y-6">
                 <div>
                     <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Usuario</label>
-                    <input type="text" name="username" id="username" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="tu-usuario">
+                    <input type="text" name="username" id="username" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="tu-usuario">
                 </div>
                 <div>
                     <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Contraseña</label>
-                    <input type="password" name="password" id="password" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="••••••••">
+                    <input type="password" name="password" id="password" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="••••••••">
                 </div>
                 <button type="button" class="w-full btn-shine bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg">
                     Acceder
@@ -1143,11 +977,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const fonts = [
-                { name: 'Roboto', style: 'font-family: "Roboto", sans-serif;' }, { name: 'Lato', style: 'font-family: "Lato", sans-serif;' }, { name: 'Montserrat', style: 'font-family: "Montserrat", sans-serif;' }, { name: 'Oswald', style: 'font-family: "Oswald", sans-serif;' }, { name: 'Raleway', style: 'font-family: "Raleway", sans-serif;' }, { name: 'Merriweather', style: 'font-family: "Merriweather", serif;' }, { name: 'Nunito', style: 'font-family: "Nunito", sans-serif;' }, { name: 'Playfair Display', style: 'font-family: "Playfair Display", serif;' }, { name: 'Poppins', style: 'font-family: "Poppins", sans-serif;' }, { name: 'Open Sans', style: 'font-family: "Open Sans", sans-serif;' }, { name: 'Ubuntu', style: 'font-family: "Ubuntu", sans-serif;' }, { name: 'Source Code Pro', style: 'font-family: "Source Code Pro", monospace;' }, { name: 'Lobster', style: 'font-family: "Lobster", cursive;' }, { name: 'Pacifico', style: 'font-family: "Pacifico", cursive;' }, { name: 'Bebas Neue', style: 'font-family: "Bebas Neue", cursive;' }, { name: 'Anton', style: 'font-family: "Anton", sans-serif;' }, { name: 'Dancing Script', style: 'font-family: "Dancing Script", cursive;' }, { name: 'Shadows Into Light', style: 'font-family: "Shadows Into Light", cursive;' }, { name: 'Caveat', style: 'font-family: "Caveat", cursive;' }, { name: 'Indie Flower', style: 'font-family: "Indie Flower", cursive;' },
-                { name: 'Press Start 2P', style: 'font-family: "Press Start 2P", cursive; font-size: 0.8rem;' }, { name: 'Special Elite', style: 'font-family: "Special Elite", cursive;' }, { name: 'Sacramento', style: 'font-family: "Sacramento", cursive; font-size: 2rem;' }, { name: 'Orbitron', style: 'font-family: "Orbitron", sans-serif;' }, { name: 'Cinzel', style: 'font-family: "Cinzel", serif;' }, { name: 'Architects Daughter', style: 'font-family: "Architects Daughter", cursive;' }, { name: 'Kalam', style: 'font-family: "Kalam", cursive;' }, { name: 'Zeyada', style: 'font-family: "Zeyada", cursive; font-size: 2rem;' }, { name: 'Major Mono Display', style: 'font-family: "Major Mono Display", monospace;' }, { name: 'Homemade Apple', style: 'font-family: "Homemade Apple", cursive;' }
-            ];
-
+            // ELIMINADO: Array de fuentes
+            
             const titleEffects = [
                 { name: 'Gradiente Animado', html: '<div class="title-effect-wrapper"><h2 class="title-gradient-anim">TITULO DE PRUEBA</h2></div>', css: '.title-gradient-anim { ... }' },
                 { name: 'Efecto 3D', html: '<div class="title-effect-wrapper"><h2 class="title-3d-effect">TITULO DE PRUEBA</h2></div>', css: '.title-3d-effect { ... }' },
@@ -1198,7 +1029,7 @@
                 { name: 'Obturador', html: '<button class="btn-shutter-out text-white font-semibold py-2 px-4 rounded-lg">Obturador</button>', css: ".btn-shutter-out { ... }" },
                 { name: 'Capas', html: '<button class="btn-layers relative bg-emerald-500 text-white font-semibold py-2 px-4 rounded-lg"><span></span><span></span><span></span>Capas</button>', css: ".btn-layers { ... }" },
                 { name: 'Icono', html: '<button class="bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg flex items-center gap-2 group">Explorar <span class="transition-transform group-hover:translate-x-1">→</span></button>' },
-                { name: 'Neumórfico', html: '<button class="bg-gray-800 text-gray-400 font-semibold py-2 px-4 rounded-full shadow-[7px_7px_15px_#0c111d,_-7px_-7px_15px_#161f31] active:shadow-[inset_7px_7px_15px_#0c111d,_inset_-7px_-7px_15px_#161f31] transition-shadow">Neumórfico</button>' },
+                { name: 'Neumórfico', html: '<button class="bg-gray-800 text-gray-400 font-semibold py-2 px-4 rounded-full shadow-[7px_7px_15px_#1a202c,_-7px_-7px_15px_#3e4a5f] active:shadow-[inset_7px_7px_15px_#1a202c,_inset_-7px_-7px_15px_#3e4a5f] transition-shadow">Neumórfico</button>' },
                 { name: 'Elástico', html: '<button class="bg-yellow-500 text-gray-900 font-semibold py-2 px-4 rounded-lg transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] hover:scale-110 active:scale-90">Elástico</button>' },
                 { name: 'Subrayado', html: '<button class="relative text-blue-400 font-semibold py-2 px-4 group">Subrayado<span class="absolute bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-200 group-hover:w-full"></span></button>' },
                 { name: 'Texto Desliz.', html: '<button class="relative bg-green-600 text-white font-semibold py-2 px-4 rounded-lg h-[40px] overflow-hidden group"><span class="flex items-center justify-center h-full transition-transform duration-300 group-hover:-translate-y-full">Deslizar</span><span class="absolute inset-0 flex items-center justify-center h-full transition-transform duration-300 translate-y-full group-hover:translate-y-0">¡Adelante!</span></button>' },
@@ -1244,36 +1075,36 @@
             
             const effects = [
                 { name: 'Borde Neón', html: '<div class="card card-neon-border flex justify-center items-center p-4"><h3 class="text-xl font-bold">Borde Neón</h3></div>', css: ".card-neon-border { ... }" },
-                { name: 'Parallax', html: '<div class="card card-parallax relative"><img src="https://placehold.co/220x280/1f2937/FFFFFF?text=Fondo" class="card-image w-full h-full object-cover absolute rounded-lg" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/1f2937/FFFFFF?text=Error\'"><h3 class="card-title text-2xl font-black text-white absolute bottom-4 left-4">PARALLAX</h3></div>', css: ".card-parallax { ... }" },
+                { name: 'Parallax', html: '<div class="card card-parallax relative"><img src="https://placehold.co/320x280/2d3748/FFFFFF?text=Fondo" class="card-image w-full h-full object-cover absolute rounded-lg" onerror="this.onerror=null;this.src=\'https://placehold.co/320x280/2d3748/FFFFFF?text=Error\'"><h3 class="card-title text-2xl font-black text-white absolute bottom-4 left-4">PARALLAX</h3></div>', css: ".card-parallax { ... }" },
                 { name: 'Cristal (Glass)', html: '<div class="card card-glass flex justify-center items-center p-4"><h3 class="text-xl font-bold">Cristal</h3></div>', css: ".card-glass { ... }" },
                 { name: 'Aurora Demo', html: '<div class="card card-aurora-demo flex justify-center items-center p-4"><h3 class="text-xl font-bold">Aurora</h3></div>', css: ".card-aurora-demo { ... }" },
-                { name: 'Zoom Imagen', html: '<div class="card card-img-zoom"><img src="https://placehold.co/220x280/8b5cf6/FFFFFF?text=Imagen" alt="Placeholder" class="card-image" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/8b5cf6/FFFFFF?text=Error\'"></div>', css: ".card-img-zoom { ... }" },
-                { name: 'Contenido Desliz.', html: '<div class="card card-slide-content relative"><img src="https://placehold.co/220x280/10b981/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/10b981/FFFFFF?text=Error\'"><div class="card-content"><h3 class="text-lg font-bold">Título</h3></div></div>', css: ".card-slide-content { ... }" },
+                { name: 'Zoom Imagen', html: '<div class="card card-img-zoom"><img src="https://placehold.co/320x280/8b5cf6/FFFFFF?text=Imagen" alt="Placeholder" class="card-image" onerror="this.onerror=null;this.src=\'https://placehold.co/320x280/8b5cf6/FFFFFF?text=Error\'"></div>', css: ".card-img-zoom { ... }" },
+                { name: 'Contenido Desliz.', html: '<div class="card card-slide-content relative"><img src="https://placehold.co/320x280/10b981/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/320x280/10b981/FFFFFF?text=Error\'"><div class="card-content"><h3 class="text-lg font-bold">Título</h3></div></div>', css: ".card-slide-content { ... }" },
                 { name: 'Inclinado', html: '<div class="card card-skew flex justify-center items-center p-4"><h3 class="text-xl font-bold">Inclinado</h3></div>', css: ".card-skew:hover { transform: skew(-5deg, -2deg) scale(1.05); }" },
                 { name: 'Profundidad 3D', html: '<div class="card card-3d-depth flex justify-center items-center p-4 bg-indigo-600"><h3 class="text-xl font-bold">Profundidad</h3></div>', css: ".card-3d-depth { ... }" },
-                { name: 'Desplazamiento de Borde', html: '<div class="card card-border-shift p-6 rounded-lg"><h3 class="text-xl font-bold text-sky-400">Título del Puesto</h3><p class="text-lg font-semibold text-white">Empresa</p><p class="text-gray-300 mt-2">Descripción de tus tareas...</p></div>', css: ".card-border-shift { ... }" },
+                { name: 'Desplazamiento de Borde', html: '<div class="card-border-shift p-6 rounded-lg"><h3 class="text-xl font-bold text-sky-400">Título del Puesto</h3><p class="text-lg font-semibold text-white">Empresa</p><p class="text-gray-300 mt-2">Descripción de tus tareas...</p></div>', css: ".card-border-shift { ... }" },
                 { name: 'Imagen Desplaz.', html: '<div class="card card-img-shift"><img src="https://placehold.co/320x320/f472b6/FFFFFF?text=Imagen" class="card-image w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/320x320/f472b6/FFFFFF?text=Error\'"></div>', css: ".card-img-shift { ... }" },
                 { name: 'Acordeón', html: '<div class="card card-accordion p-4 flex flex-col items-center"><h3 class="text-xl font-bold">Acordeón</h3><div class="hidden-content text-center mt-4"><p class="text-gray-400">Contenido oculto que aparece al pasar el cursor.</p></div></div>', css: ".card-accordion { ... }" },
                 { name: 'Plegable', html: '<div class="card card-folding bg-teal-500 flex justify-end items-center p-4"><div class="fold flex justify-center items-center"><p class="text-white font-bold -rotate-90">ABRIR</p></div><h3 class="text-xl font-bold">Plegable</h3></div>', css: ".card-folding { ... }" },
                 { name: 'Esquina Pelable', html: '<div class="card card-peel flex justify-center items-center bg-indigo-600"><h3 class="text-xl font-bold">Pelar Esquina</h3></div>', css: ".card-peel::before { ... }" },
-                { name: 'Imagen Glitch', html: '<div class="card card-glitch-img bg-cover" style="background-image: url(\'https://placehold.co/220x280/eab308/FFFFFF?text=Imagen\')"><div class="glitch-layer"></div><div class="glitch-layer"></div><h3 class="absolute bottom-4 left-4 text-2xl font-black text-white">Glitch</h3></div>', css: ".card-glitch-img { ... }" },
+                { name: 'Imagen Glitch', html: '<div class="card card-glitch-img bg-cover" style="background-image: url(\'https://placehold.co/320x280/eab308/FFFFFF?text=Imagen\')"><div class="glitch-layer"></div><div class="glitch-layer"></div><h3 class="absolute bottom-4 left-4 text-2xl font-black text-white">Glitch</h3></div>', css: ".card-glitch-img { ... }" },
                 { name: 'Spotlight Follow', html: '<div class="card card-spotlight-follow flex justify-center items-center"><h3 class="text-xl font-bold">Spotlight</h3></div>', css: '.card-spotlight-follow { ... } /* Requiere JS */' },
                 { name: '3D Flip', html: '<div class="card card-3d-flip"><div class="card-front flex justify-center items-center bg-teal-600">Frente</div><div class="card-back flex justify-center items-center bg-rose-600 p-4 text-center">Contenido del Dorso</div></div>', css: '.card-3d-flip { ... }' },
-                { name: 'Enfoque Contenido', html: '<div class="card relative group bg-cover bg-center" style="background-image: url(\'https://placehold.co/220x280/34d399/FFFFFF?text=Fondo\')"><div class="absolute inset-0 bg-black/50 group-hover:bg-black/75 transition-all duration-300"></div><div class="relative p-4 flex flex-col justify-end h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><h3 class="font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Enfoque</h3><p class="text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">El contenido aparece.</p></div></div>', css: '/* CSS Only */' },
+                { name: 'Enfoque Contenido', html: '<div class="card relative group bg-cover bg-center" style="background-image: url(\'https://placehold.co/320x280/34d399/FFFFFF?text=Fondo\')"><div class="absolute inset-0 bg-black/50 group-hover:bg-black/75 transition-all duration-300"></div><div class="relative p-4 flex flex-col justify-end h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><h3 class="font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Enfoque</h3><p class="text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">El contenido aparece.</p></div></div>', css: '/* CSS Only */' },
                 { name: 'Borde Animado', html: '<div class="card relative p-1 overflow-hidden bg-gray-900"><div class="absolute inset-[-100%] bg-purple-500 animate-spin-slow" style="animation-duration: 4s;"></div><div class="relative bg-gray-900 w-full h-full rounded-lg flex items-center justify-center">Borde Animado</div></div>', css: '@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }' },
-                { name: 'Desenfoque Fondo', html: '<div class="card relative bg-cover bg-center group" style="background-image: url(\'https://placehold.co/220x280/f87171/FFFFFF?text=Imagen\')"><div class="absolute inset-2 bg-white/10 backdrop-blur-sm rounded-lg group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-300"></div><h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity">Visible</h3></div>', css: '/* CSS Only */' },
+                { name: 'Desenfoque Fondo', html: '<div class="card relative bg-cover bg-center group" style="background-image: url(\'https://placehold.co/320x280/f87171/FFFFFF?text=Imagen\')"><div class="absolute inset-2 bg-white/10 backdrop-blur-sm rounded-lg group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-300"></div><h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity">Visible</h3></div>', css: '/* CSS Only */' },
                 { name: 'Texto Revelado', html: '<div class="card p-4 flex items-end bg-gray-900 group"><h3 class="text-2xl font-bold text-white relative w-full overflow-hidden"><span class="absolute bottom-0 left-0 h-full w-full bg-sky-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></span><span class="relative mix-blend-lighten">Texto Revelado</span></h3></div>', css: '/* CSS Only */' },
                 { name: 'Líneas Conectadas', html: '<div class="card relative bg-gray-900"><canvas class="card-particles w-full h-full absolute top-0 left-0"></canvas><h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">Partículas</h3></div>', css: '/* Requiere JS */' },
-                { name: 'Reflejo', html: '<div class="card group bg-gray-900"><div class="relative"><img src="https://placehold.co/220x200/fb923c/FFFFFF?text=Imagen" class="w-full h-auto block" onerror="this.onerror=null;this.src=\'https://placehold.co/220x200/fb923c/FFFFFF?text=Error\'"><div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent"></div></div><div class="absolute bottom-[-100%] left-0 w-full transform -scale-y-100 opacity-30 group-hover:opacity-50 transition-opacity duration-300"><img src="https://placehold.co/220x200/fb923c/FFFFFF?text=Imagen" class="w-full h-auto block" onerror="this.onerror=null;this.src=\'https://placehold.co/220x200/fb923c/FFFFFF?text=Error\'"></div></div>', css: '/* CSS Only */' },
-                { name: 'Máscara Circular', html: '<div class="card card-mask-hover bg-cover bg-center group" style="background-image: url(\'https://placehold.co/220x280/4ade80/FFFFFF?text=Imagen\')"><div class="w-full h-full bg-gray-900 flex items-center justify-center text-center p-4 text-white" style="clip-path: circle(25% at 50% 50%); transition: clip-path 0.4s ease-in-out;"><h3 class="text-xl font-bold">Máscara</h3></div></div>', css: '.card-mask-hover:hover div { clip-path: circle(75% at 50% 50%); }' },
-                { name: 'Contorno de Texto', html: '<div class="card flex justify-center items-center bg-gray-900"><h3 class="text-5xl font-black text-white text-center" style="background-image: url(https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=220&h=280&fit=crop); -webkit-background-clip: text; background-clip: text; color: transparent;">CONTORNO</h3></div>', css: '/* CSS Only */' },
-                { name: 'Capa de Color', html: '<div class="card relative group"><img src="https://placehold.co/220x280/d946ef/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/d946ef/FFFFFF?text=Error\'"><div class="absolute inset-0 bg-fuchsia-500 mix-blend-multiply group-hover:mix-blend-normal transition-all duration-300"></div></div>', css: '/* CSS Only */' },
+                { name: 'Reflejo', html: '<div class="card group bg-gray-900"><div class="relative"><img src="https://placehold.co/320x200/fb923c/FFFFFF?text=Imagen" class="w-full h-auto block" onerror="this.onerror=null;this.src=\'https://placehold.co/320x200/fb923c/FFFFFF?text=Error\'"><div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent"></div></div><div class="absolute bottom-[-100%] left-0 w-full transform -scale-y-100 opacity-30 group-hover:opacity-50 transition-opacity duration-300"><img src="https://placehold.co/320x200/fb923c/FFFFFF?text=Imagen" class="w-full h-auto block" onerror="this.onerror=null;this.src=\'https://placehold.co/320x200/fb923c/FFFFFF?text=Error\'"></div></div>', css: '/* CSS Only */' },
+                { name: 'Máscara Circular', html: '<div class="card card-mask-hover bg-cover bg-center group" style="background-image: url(\'https://placehold.co/320x280/4ade80/FFFFFF?text=Imagen\')"><div class="w-full h-full bg-gray-900 flex items-center justify-center text-center p-4 text-white" style="clip-path: circle(25% at 50% 50%); transition: clip-path 0.4s ease-in-out;"><h3 class="text-xl font-bold">Máscara</h3></div></div>', css: '.card-mask-hover:hover div { clip-path: circle(75% at 50% 50%); }' },
+                { name: 'Contorno de Texto', html: '<div class="card flex justify-center items-center bg-gray-900"><h3 class="text-5xl font-black text-white text-center" style="background-image: url(https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=320&h=280&fit=crop); -webkit-background-clip: text; background-clip: text; color: transparent;">CONTORNO</h3></div>', css: '/* CSS Only */' },
+                { name: 'Capa de Color', html: '<div class="card relative group"><img src="https://placehold.co/320x280/d946ef/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/320x280/d946ef/FFFFFF?text=Error\'"><div class="absolute inset-0 bg-fuchsia-500 mix-blend-multiply group-hover:mix-blend-normal transition-all duration-300"></div></div>', css: '/* CSS Only */' },
                 { name: 'Inclinación Magnética', html: '<div class="card card-magnetic-tilt flex items-center justify-center bg-rose-500"><h3 class="text-2xl font-bold">Magnético</h3></div>', css: '/* Requiere JS */' },
                 { name: 'Grano Animado', html: '<div class="card relative flex items-center justify-center overflow-hidden bg-slate-700"><h3 class="text-2xl font-bold">Grano</h3><div class="card-grain"></div></div>', css: '.card-grain { ... }' },
                 { name: 'Patrón Animado', html: '<div class="card relative flex items-center justify-center overflow-hidden"><div class="card-pattern"></div><h3 class="relative text-2xl font-bold">Patrón</h3></div>', css: '.card-pattern { ... }' },
                 { name: 'Elementos Flotantes', html: '<div class="card relative overflow-hidden flex items-center justify-center"><div class="floating-shapes"></div><h3 class="relative text-2xl font-bold">Flotante</h3></div>', css: '.floating-shapes { ... }' },
                 { name: 'Fondo Aurora', html: '<div class="card card-background-aurora flex justify-center items-center"><h3 class="text-xl font-bold">Fondo Aurora</h3></div>', css: '.card-background-aurora { ... }' },
-                { name: 'Pixel Sort', html: '<div class="card card-pixel-sort"><img src="https://placehold.co/220x280/a78bfa/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/220x280/a78bfa/FFFFFF?text=Error\'"></div>', css: '.card-pixel-sort:hover img { filter: url(#pixel-sort-filter); }' },
+                { name: 'Pixel Sort', html: '<div class="card card-pixel-sort"><img src="https://placehold.co/320x280/a78bfa/FFFFFF?text=Imagen" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=\'https://placehold.co/320x280/a78bfa/FFFFFF?text=Error\'"></div>', css: '.card-pixel-sort:hover img { filter: url(#pixel-sort-filter); }' },
                 { name: 'Gooey Hover', html: '<div class="card card-gooey-hover flex justify-center items-center"><div class="gooey-blob w-16 h-16"></div><h3 class="absolute text-xl font-bold">Gooey</h3></div>', css: '.card-gooey-hover { ... } /* Requiere SVG */' },
                 { name: 'Foco en Texto', html: '<div class="card card-text-focus p-4 flex flex-col justify-center items-center text-center"><p class="unfocused">Pasa el cursor</p><h3 class="focused text-2xl font-bold text-sky-400">AQUÍ</h3><p class="unfocused">para enfocar</p></div>', css: '.card-text-focus { ... }' },
                 { name: 'Ventana Recortada', html: '<div class="card card-cutout-window"><div class="window w-full h-full bg-cover" style="background-image: url(\'https://placehold.co/320x280/ec4899/FFFFFF?text=Interior\')"></div></div>', css: '.card-cutout-window { ... }' },
@@ -1282,6 +1113,243 @@
                 { name: 'Texto Perspectiva', html: '<div class="card card-perspective-text flex justify-center items-center"><h3 class="text-3xl font-black">Perspectiva</h3></div>', css: '.card-perspective-text { ... }' },
                 { name: 'Preview Video', html: '<div class="card card-video-preview p-0"><video autoplay loop muted class="w-full h-full object-cover" style="filter: grayscale(100%) blur(5px);"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video></div>', css: '.card-video-preview { ... }' }
             ];
+
+            const effectLogics = {
+                p1: (ctx, s) => {
+                    if (!s.p) s.p = [];
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (s.p.length < 100) for (let i = 0; i < 100; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, sz: Math.random() * 2 + 1, sy: -.2 });
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach(p => {
+                        p.y += p.sy;
+                        if (p.y < 0) { p.y = h; p.x = Math.random() * w }
+                        ctx.fillStyle = `rgba(255,255,255,${Math.random()})`;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.sz, 0, Math.PI * 2);
+                        ctx.fill()
+                    })
+                },
+                p2: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; s.fSz = 14; s.cols = w / s.fSz; s.drops = []; for (let x = 0; x < s.cols; x++) s.drops[x] = 1 }
+                    ctx.fillStyle = 'rgba(26,32,44,.1)';
+                    ctx.fillRect(0, 0, w, h);
+                    ctx.fillStyle = '#34D399';
+                    ctx.font = s.fSz + 'px monospace';
+                    for (let i = 0; i < s.drops.length; i++) {
+                        const txt = String.fromCharCode(0x30A0 + Math.random() * 96);
+                        ctx.fillText(txt, i * s.fSz, s.drops[i] * s.fSz);
+                        if (s.drops[i] * s.fSz > h && Math.random() > .975) s.drops[i] = 0;
+                        s.drops[i]++
+                    }
+                },
+                p3: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 30; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, sz: Math.random() * 3 + 1, sx: (Math.random() - .5) * .5, sy: (Math.random() - .5) * .5, o: Math.random() }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach(p => {
+                        p.x += p.sx;
+                        p.y += p.sy;
+                        p.o += (Math.random() - .5) * .1;
+                        if (p.o < 0) p.o = 0;
+                        if (p.o > 1) p.o = 1;
+                        if (p.x > w || p.x < 0) p.sx *= -1;
+                        if (p.y > h || p.y < 0) p.sy *= -1;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.sz, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(250,204,21,${p.o})`;
+                        ctx.fill()
+                    })
+                },
+                p4: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.l) { s.l = []; for (let i = 0; i < 15; i++) s.l.push({ x1: w / 2, y1: h / 2, x2: Math.random() * w, y2: Math.random() * h, life: 1 }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.l.forEach((l, i) => {
+                        l.life -= .01;
+                        if (l.life <= 0) s.l[i] = { x1: w / 2, y1: h / 2, x2: Math.random() * w, y2: Math.random() * h, life: 1 };
+                        ctx.beginPath();
+                        ctx.moveTo(l.x1, l.y1);
+                        ctx.lineTo(l.x2, l.y2);
+                        ctx.strokeStyle = `rgba(59,130,246,${l.life})`;
+                        ctx.lineWidth = 2;
+                        ctx.stroke()
+                    })
+                },
+                p5: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 20; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, r: Math.random() * 10 + 5, mr: Math.random() * 20 + 10, sp: Math.random() * .05 + .01, c: `hsl(${Math.random()*360},100%,70%)` }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach((p, i) => {
+                        p.r += p.sp;
+                        if (p.r > p.mr) s.p[i] = { x: Math.random() * w, y: Math.random() * h, r: 0, mr: Math.random() * 20 + 10, sp: Math.random() * .05 + .01, c: `hsl(${Math.random()*360},100%,70%)` };
+                        ctx.strokeStyle = p.c;
+                        ctx.lineWidth = 3;
+                        ctx.globalAlpha = 1 - (p.r / p.mr);
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1
+                    })
+                },
+                p6: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; s.bY = h * .8 }
+                    ctx.clearRect(0, 0, w, h);
+                    if (s.p.length < 100) for (let i = 0; i < 5; i++) s.p.push({ x: w / 2 + (Math.random() - .5) * 50, y: s.bY, sz: Math.random() * 5 + 2, sy: -Math.random() * 2 - 1, life: 1 });
+                    s.p.forEach((p, i) => {
+                        p.y += p.sy;
+                        p.life -= .02;
+                        if (p.life <= 0) s.p.splice(i, 1);
+                        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.sz);
+                        g.addColorStop(0, `rgba(251,146,60,${p.life})`);
+                        g.addColorStop(1, `rgba(239,68,68,0)`);
+                        ctx.fillStyle = g;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.sz, 0, Math.PI * 2);
+                        ctx.fill()
+                    })
+                },
+                p7: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    ctx.fillStyle = 'rgba(26,32,44,.2)';
+                    ctx.fillRect(0, 0, w, h);
+                    if (w <= 0 || h <= 0) return;
+                    for (let i = 0; i < 5; i++) {
+                        const x = Math.random() * w;
+                        const y = Math.random() * h;
+                        const size = Math.random() * 20 + 5;
+                        ctx.fillStyle = ['#f472b6', '#38bdf8', '#a78bfa'][Math.floor(Math.random() * 3)];
+                        ctx.fillRect(x, y, size, size);
+                    }
+                    for (let i = 0; i < 3; i++) {
+                        const y = Math.random() * h;
+                        const hgt = Math.random() * 10 + 1;
+                        try {
+                           const iD = ctx.getImageData(0, y, w, hgt);
+                           ctx.putImageData(iD, (Math.random() - .5) * 20, y);
+                        } catch(e) { /* ignore security errors on some browsers */ }
+                    }
+                },
+                p8: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 50; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, r: 2, sx: (Math.random() - .5) * .5, sy: (Math.random() - .5) * .5 }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach(p => { p.x += p.sx;
+                        p.y += p.sy; if (p.x < 0 || p.x > w) p.sx *= -1; if (p.y < 0 || p.y > h) p.sy *= -1;
+                        ctx.fillStyle = 'white';
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+                        ctx.fill() });
+                    for (let i = 0; i < s.p.length; i++) {
+                        for (let j = i; j < s.p.length; j++) {
+                            const dx = s.p[i].x - s.p[j].x, dy = s.p[i].y - s.p[j].y, dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < 100) { ctx.beginPath();
+                                ctx.strokeStyle = `rgba(255,255,255,${1-dist/100})`;
+                                ctx.lineWidth = 1;
+                                ctx.moveTo(s.p[i].x, s.p[i].y);
+                                ctx.lineTo(s.p[j].x, s.p[j].y);
+                                ctx.stroke() }
+                        }
+                    }
+                },
+                p9: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; s.e = null }
+                    ctx.clearRect(0, 0, w, h);
+                    if (!s.e && Math.random() > .95) { s.e = { x: w / 2, y: h / 2, p: [] }; for (let i = 0; i < 50; i++) { const a = Math.random() * Math.PI * 2, sp = Math.random() * 3 + 1;
+                        s.e.p.push({ x: s.e.x, y: s.e.y, sx: Math.cos(a) * sp, sy: Math.sin(a) * sp, l: 1, c: `hsl(${Math.random()*360},100%,70%)` }) } }
+                    if (s.e) { s.e.p.forEach((p, i) => { p.x += p.sx;
+                        p.y += p.sy;
+                        p.l -= .02; if (p.l <= 0) s.e.p.splice(i, 1);
+                        ctx.fillStyle = p.c;
+                        ctx.globalAlpha = p.l;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                        ctx.fill() });
+                        ctx.globalAlpha = 1; if (s.e.p.length === 0) s.e = null }
+                },
+                p10: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 200; i++) s.p.push({ a: i * .1, r: i * .5, c: `hsl(${i%360},100%,70%)` }) }
+                    ctx.fillStyle = 'rgba(26,32,44,0.1)';
+                    ctx.fillRect(0,0,w,h);
+                    ctx.save();
+                    ctx.translate(w / 2, h / 2);
+                    s.p.forEach(p => { p.a += .05;
+                        p.r *= .99; if (p.r < 1) p.r = Math.min(w,h) / 2; const x = Math.cos(p.a) * p.r, y = Math.sin(p.a) * p.r;
+                        ctx.fillStyle = p.c;
+                        ctx.beginPath();
+                        ctx.arc(x, y, 2, 0, Math.PI * 2);
+                        ctx.fill() });
+                    ctx.restore()
+                },
+                p11: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; s.mouse = { x: w / 2, y: h / 2 };
+                        ctx.canvas.addEventListener('mousemove', e => { const rect = ctx.canvas.getBoundingClientRect();
+                            s.mouse.x = (e.clientX - rect.left);
+                            s.mouse.y = (e.clientY - rect.top) }) }
+                    ctx.fillStyle = 'rgba(26,32,44,0.1)';
+                    ctx.fillRect(0,0,w,h);
+                    s.p.push({ x: s.mouse.x, y: s.mouse.y, l: 1, c: `hsl(${s.p.length%360},100%,70%)` });
+                    s.p.forEach((p, i) => { p.l -= .02; if (p.l <= 0) s.p.splice(i, 1);
+                        ctx.fillStyle = p.c;
+                        ctx.globalAlpha = p.l;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                        ctx.fill() });
+                    ctx.globalAlpha = 1
+                },
+                p13: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 40; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, sz: Math.random() * 3 + 1, sy: -Math.random() * .5 - .2, o: 1 }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach(p => { p.y += p.sy;
+                        p.x += Math.sin(p.y / 20) * .5;
+                        p.o -= .005; if (p.o <= 0) { p.y = h; p.x = Math.random() * w; p.o = 1 }
+                        ctx.fillStyle = `rgba(255,100,50,${p.o})`;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.sz, 0, Math.PI * 2);
+                        ctx.fill()
+                    })
+                },
+                p14: (ctx, s) => {
+                    const w = ctx.canvas.width / (window.devicePixelRatio || 1), h = ctx.canvas.height / (window.devicePixelRatio || 1);
+                    if (!s.p) { s.p = []; for (let i = 0; i < 100; i++) s.p.push({ x: Math.random() * w, y: Math.random() * h, sz: Math.random() * 3 + 1, sy: Math.random() * 1 + .5 }) }
+                    ctx.clearRect(0, 0, w, h);
+                    s.p.forEach(p => { p.y += p.sy;
+                        p.x += Math.sin(p.y / 50); if (p.y > h) { p.y = 0; p.x = Math.random() * w }
+                        ctx.fillStyle = 'white';
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.sz, 0, Math.PI * 2);
+                        ctx.fill()
+                    })
+                },
+            };
+            
+            const newParticleEffects = [
+                { id: 'p1', name: 'Polvo de Estrellas' },
+                { id: 'p2', name: 'Lluvia Digital' },
+                { id: 'p3', name: 'Luciérnagas Encantadas' },
+                { id: 'p4', name: 'Trazos Geométricos' },
+                { id: 'p5', name: 'Burbujas de Neón' },
+                { id: 'p6', name: 'Fuego Etéreo' },
+                { id: 'p7', name: 'Glitch Cuántico' },
+                { id: 'p8', name: 'Constelación Conectada' },
+                { id: 'p9', name: 'Explosión de Partículas' },
+                { id: 'p10', name: 'Vórtice Espiral' },
+                { id: 'p11', name: 'Rastro de Ratón' },
+                { id: 'p13', name: 'Brasas Flotantes' },
+                { id: 'p14', name: 'Nevada Suave' }
+            ].map(effect => ({
+                name: effect.name,
+                html: `<div class="card relative bg-gray-900 w-full h-full min-h-[280px]">
+                         <canvas class="particle-effect-canvas w-full h-full absolute top-0 left-0 rounded-lg" data-effect-id="${effect.id}"></canvas>
+                       </div>`,
+                css: `/* Canvas-based animation. See JS logic. */`,
+                jsLogic: effectLogics[effect.id].toString()
+            }));
 
             // Color Picker Logic (Fixed)
             const colorWheelContainer = document.getElementById('color-wheel-container');
@@ -1372,7 +1440,6 @@
                     const size = entry.contentRect.width;
                     canvas.width = size * dpr;
                     canvas.height = size * dpr;
-                    // No need to scale context if we redraw based on new canvas dimensions
                     canvas.style.width = `${size}px`;
                     canvas.style.height = `${size}px`;
                     
@@ -1580,8 +1647,8 @@
 
 <!-- JavaScript (requiere Chart.js) -->
 <script>
-    const ctx = document.getElementById('${canvasId}').getContext('2d');
-    const myChart = new Chart(ctx, ${JSON.stringify(chartItem.config, null, 2)});
+   const ctx = document.getElementById('${canvasId}').getContext('2d');
+   const myChart = new Chart(ctx, ${JSON.stringify(chartItem.config, null, 2)});
 <\/script>`;
 
                 wrapper.innerHTML = `
@@ -1613,6 +1680,9 @@
                 const content = renderContentFn(item);
                 let code = `<!-- HTML -->\n${item.html || content}`;
                 if (item.css) code += `\n\n<!-- CSS -->\n<style>\n${item.css}\n</style>`;
+                if (item.jsLogic) {
+                    code += `\n\n<!-- JAVASCRIPT LOGIC -->\n<script>\n// Nota: Esta lógica requiere un bucle de animación (ej. requestAnimationFrame) para funcionar.\nconst logic = ${item.jsLogic};\n<\/script>`;
+                }
                 if (item.import) code = `<!-- Agrega en tu <head> -->\n<link href="${item.import.split("'")[1]}" rel="stylesheet">\n\n${code}`;
 
                 wrapper.innerHTML = `
@@ -1628,8 +1698,6 @@
                 return wrapper;
             }
 
-            const renderFont = (font, index) => createComponentDisplay(font, index, item => `<p class="text-2xl text-center" style="${item.style}">${item.name}</p>`);
-            
             const renderTitleEffect = (effect, index) => {
                 let finalHtml = effect.html.replace(/TITULO DE PRUEBA/g, effect.name.toUpperCase());
                 finalHtml = finalHtml.replace(/data-text="[^"]*"/, `data-text="${effect.name.toUpperCase()}"`);
@@ -1652,10 +1720,10 @@
             const renderButton = (button, index) => createComponentDisplay(button, index, item => item.html);
             const renderEffect = (effect, index) => createComponentDisplay(effect, index, item => item.html);
 
-            populateGallery('typography-gallery', fonts, renderFont);
+            // ELIMINADO: Llamada a populateGallery para tipografías
             populateGallery('title-effects-gallery', titleEffects, renderTitleEffect);
             populateGallery('buttons-gallery', buttons, renderButton);
-            populateGallery('effects-gallery', effects, renderEffect);
+            populateGallery('effects-gallery', effects.concat(newParticleEffects), renderEffect);
             populateGallery('charts-gallery', charts, renderChart);
 
             function setupSearch(inputId, galleryId) {
@@ -1677,7 +1745,7 @@
                 });
             }
 
-            setupSearch('search-typography', 'typography-gallery');
+            // ELIMINADO: setupSearch para tipografías
             setupSearch('search-title-effects', 'title-effects-gallery');
             setupSearch('search-effects', 'effects-gallery');
             setupSearch('search-buttons', 'buttons-gallery');
@@ -1714,68 +1782,6 @@
                 }
             });
             
-            const certifications = [
-                { title: 'Backend con Node.js: Base de Datos con PostgreSQL', issuer: 'Platzi', date: 'Jul 2025' },
-                { title: 'MLOPS: Despliegue de Modelos de Machine Learning', issuer: 'Platzi', date: 'Jul 2025' },
-                { title: 'Network Addressing and Basic Troubleshooting', issuer: 'Cisco', date: 'Ene 2025' },
-                { title: 'Network Support and Security', issuer: 'Cisco', date: 'Ene 2025' },
-                { title: 'Estadística Inferencial para Data Science e IA', issuer: 'Platzi', date: 'Nov 2023' },
-                { title: 'Presupuesto y Flujo de Caja', issuer: 'Platzi', date: 'Nov 2023' },
-                { title: 'Redes Neuronales con PyTorch', issuer: 'Platzi', date: 'Nov 2023' },
-                { title: 'Economía y Finanzas: Indicadores Económicos', issuer: 'Platzi', date: 'Mar 2023' },
-                { title: 'Hacking Ético', issuer: 'Platzi', date: 'Mar 2023' },
-                { title: 'Cómo y Por Qué Aprender Data Science e IA', issuer: 'Platzi', date: 'Feb 2023' },
-                { title: 'Manipulación de Datos con Pandas y NumPy', issuer: 'Platzi', date: 'Ene 2023' },
-                { title: 'Curso Práctico de SQL', issuer: 'Platzi', date: 'Ene 2023' },
-                { title: 'Análisis de Datos con Power BI', issuer: 'Platzi', date: 'Ene 2023' },
-                { title: 'Excel Financiero', issuer: 'Platzi', date: 'Ene 2023' },
-                { title: 'Análisis de Negocios para Ciencia de Datos', issuer: 'Platzi', date: 'Nov 2022' },
-                { title: 'Excel Básico', issuer: 'Platzi', date: 'Nov 2022' },
-                { title: 'Introducción a Excel', issuer: 'Platzi', date: 'Nov 2022' },
-                { title: 'Ética y Manejo de Datos para Data Science e IA', issuer: 'Platzi', date: 'Nov 2022' },
-                { title: 'Fundamentos de Python', issuer: 'Platzi', date: 'Oct 2022' },
-            ];
-
-            const certificationsContainer = document.getElementById('certifications');
-            const certModal = document.getElementById('certification-modal');
-            const modalBody = document.getElementById('modal-body');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-
-            certifications.forEach(cert => {
-                const card = document.createElement('div');
-                card.className = 'card card-lift flex flex-col justify-between items-center p-6 text-center cursor-pointer';
-                card.innerHTML = `
-                    <div>
-                        <i class="fas fa-award fa-3x mb-4 text-amber-400"></i>
-                        <h3 class="text-lg font-bold text-white">${cert.title}</h3>
-                        <p class="text-gray-400 mt-2">${cert.issuer}</p>
-                    </div>
-                    <p class="text-sm text-gray-500 font-medium mt-4">Exp: ${cert.date}</p>
-                `;
-                
-                card.addEventListener('click', () => {
-                    modalBody.innerHTML = `
-                        <img src="https://placehold.co/400x250/1f2937/FFFFFF?text=Certificado" alt="Certificado de ${cert.title}" class="rounded-lg mx-auto mb-4 w-full max-w-xs" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1f2937/FFFFFF?text=Error'">
-                        <h3 class="text-2xl font-bold section-title mb-2">${cert.title}</h3>
-                        <p class="text-lg text-gray-300 mb-4">${cert.issuer} - ${cert.date}</p>
-                        <p class="text-gray-400 mb-4">ID de credencial disponible bajo petición.</p>
-                    `;
-                    certModal.classList.remove('opacity-0', 'pointer-events-none');
-                    certModal.querySelector('.modal-content').classList.remove('scale-95');
-                });
-                certificationsContainer.appendChild(card);
-            });
-
-            function closeCertModal() {
-                certModal.classList.add('opacity-0', 'pointer-events-none');
-                certModal.querySelector('.modal-content').classList.add('scale-95');
-            }
-
-            closeModalBtn.addEventListener('click', closeCertModal);
-            certModal.addEventListener('click', (e) => {
-                if (e.target === certModal) { closeCertModal(); }
-            });
-
             // Login Modal Logic
             const loginBtn = document.getElementById('login-btn');
             const loginModal = document.getElementById('login-modal');
@@ -1954,90 +1960,228 @@
             });
 
             // --- Payment Form Logic ---
-            const cardUiContainer = document.getElementById('card-ui-container');
-            const cardNumberInput = document.getElementById('card-number-input');
-            const cardNameInput = document.getElementById('card-name-input');
-            const cardExpiryInput = document.getElementById('card-expiry-input');
-            const cardCvvInput = document.getElementById('card-cvv-input');
-            const amountInput = document.getElementById('amount-input');
-            const confirmPaymentBtn = document.getElementById('confirm-payment-btn').querySelector('span');
+            const paymentSection = document.getElementById('payment-section');
+            if (paymentSection) {
+                const cardUiContainer = paymentSection.querySelector('#card-ui-container');
+                const cardNumberInput = paymentSection.querySelector('#card-number-input');
+                const cardNameInput = paymentSection.querySelector('#card-name-input');
+                const cardExpiryInput = paymentSection.querySelector('#card-expiry-input');
+                const cardCvvInput = paymentSection.querySelector('#card-cvv-input');
+                const amountInput = paymentSection.querySelector('#amount-input');
+                const confirmPaymentBtn = paymentSection.querySelector('#confirm-payment-btn span');
 
-            const cardUiNumber = document.getElementById('card-ui-number');
-            const cardUiName = document.getElementById('card-ui-name');
-            const cardUiExpiry = document.getElementById('card-ui-expiry');
-            const cardUiCvv = document.getElementById('card-ui-cvv');
-            const cardBrandIcon = document.getElementById('card-brand-icon');
+                const cardUiNumber = paymentSection.querySelector('#card-ui-number');
+                const cardUiName = paymentSection.querySelector('#card-ui-name');
+                const cardUiExpiry = paymentSection.querySelector('#card-ui-expiry');
+                const cardUiCvv = paymentSection.querySelector('#card-ui-cvv');
+                const cardBrandIcon = paymentSection.querySelector('#card-brand-icon');
 
-            function updatePaymentButtonAmount() {
-                const amount = parseFloat(amountInput.value).toFixed(2);
-                if (isNaN(amount) || amount <= 0) {
-                    confirmPaymentBtn.textContent = 'Confirmar y Pagar';
-                } else {
-                    confirmPaymentBtn.textContent = `Confirmar y Pagar $${amount}`;
+                function updatePaymentButtonAmount() {
+                    const amount = parseFloat(amountInput.value).toFixed(2);
+                    if (isNaN(amount) || amount <= 0) {
+                        confirmPaymentBtn.textContent = 'Confirmar y Pagar';
+                    } else {
+                        confirmPaymentBtn.textContent = `Confirmar y Pagar $${amount}`;
+                    }
                 }
-            }
-            
-            amountInput.addEventListener('input', updatePaymentButtonAmount);
-            document.querySelectorAll('.amount-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    amountInput.value = btn.dataset.amount;
-                    updatePaymentButtonAmount();
-                });
-            });
-
-
-            // Update Name
-            cardNameInput.addEventListener('input', (e) => {
-                const name = e.target.value.toUpperCase();
-                cardUiName.textContent = name || 'NOMBRE COMPLETO';
-            });
-
-            // Update Card Number
-            cardNumberInput.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-                value = value.replace(/(.{4})/g, '$1 ').trim(); // Add spaces every 4 digits
-                e.target.value = value;
-                cardUiNumber.textContent = value || '#### #### #### ####';
                 
-                // Update card brand icon
-                if (/^4/.test(value)) {
-                    cardBrandIcon.className = 'fab fa-cc-visa card-brand-icon';
-                } else if (/^5[1-5]/.test(value)) {
-                    cardBrandIcon.className = 'fab fa-cc-mastercard card-brand-icon';
-                } else if (/^3[47]/.test(value)) {
-                    cardBrandIcon.className = 'fab fa-cc-amex card-brand-icon';
-                } else {
-                    cardBrandIcon.className = 'fas fa-credit-card card-brand-icon';
-                }
-            });
+                amountInput.addEventListener('input', updatePaymentButtonAmount);
+                paymentSection.querySelectorAll('.amount-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        amountInput.value = btn.dataset.amount;
+                        updatePaymentButtonAmount();
+                    });
+                });
 
-            // Update Expiry
-            cardExpiryInput.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 2) {
-                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
-                }
-                e.target.value = value;
-                cardUiExpiry.textContent = value || 'MM/YY';
-            });
-            
-            // Update CVV and flip card
-            cardCvvInput.addEventListener('focus', () => {
-                cardUiContainer.classList.add('flipped');
-            });
-            cardCvvInput.addEventListener('blur', () => {
-                cardUiContainer.classList.remove('flipped');
-            });
-            cardCvvInput.addEventListener('input', (e) => {
-                cardUiCvv.textContent = e.target.value;
-            });
 
-            // Initialize payment button text
-            updatePaymentButtonAmount();
+                // Update Name
+                cardNameInput.addEventListener('input', (e) => {
+                    const name = e.target.value.toUpperCase();
+                    cardUiName.textContent = name || 'NOMBRE COMPLETO';
+                });
+
+                // Update Card Number
+                cardNumberInput.addEventListener('input', (e) => {
+                    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+                    value = value.replace(/(.{4})/g, '$1 ').trim(); // Add spaces every 4 digits
+                    e.target.value = value;
+                    cardUiNumber.textContent = value || '#### #### #### ####';
+                    
+                    // Update card brand icon
+                    if (/^4/.test(value)) {
+                        cardBrandIcon.className = 'fab fa-cc-visa card-brand-icon';
+                    } else if (/^5[1-5]/.test(value)) {
+                        cardBrandIcon.className = 'fab fa-cc-mastercard card-brand-icon';
+                    } else if (/^3[47]/.test(value)) {
+                        cardBrandIcon.className = 'fab fa-cc-amex card-brand-icon';
+                    } else {
+                        cardBrandIcon.className = 'fas fa-credit-card card-brand-icon';
+                    }
+                });
+
+                // Update Expiry
+                cardExpiryInput.addEventListener('input', (e) => {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 2) {
+                        value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                    }
+                    e.target.value = value;
+                    cardUiExpiry.textContent = value || 'MM/YY';
+                });
+                
+                // Update CVV and flip card
+                cardCvvInput.addEventListener('focus', () => {
+                    cardUiContainer.classList.add('flipped');
+                });
+                cardCvvInput.addEventListener('blur', () => {
+                    cardUiContainer.classList.remove('flipped');
+                });
+                cardCvvInput.addEventListener('input', (e) => {
+                    cardUiCvv.textContent = e.target.value;
+                });
+
+                // Initialize payment button text
+                updatePaymentButtonAmount();
+            }
+
+            // --- Title Particle Effect ---
+            const titleCanvas = document.getElementById('title-particles-canvas');
+            if (titleCanvas) {
+                const ctx = titleCanvas.getContext('2d');
+                let particles = [];
+                const options = {
+                    particleColor: "rgba(167, 139, 250, 0.7)",
+                    lineColor: "rgba(167, 139, 250, 0.3)",
+                    particleAmount: 150,
+                    defaultRadius: 2,
+                    variantRadius: 2,
+                    defaultSpeed: 0.3,
+                    variantSpeed: 0.3,
+                    linkRadius: 120
+                };
+
+                function resizeTitleCanvas() {
+                    const rect = titleCanvas.parentElement.getBoundingClientRect();
+                    titleCanvas.width = rect.width;
+                    titleCanvas.height = rect.height;
+                }
+
+                function createTitleParticles() {
+                    particles = [];
+                    for (let i = 0; i < options.particleAmount; i++) {
+                        particles.push({
+                            x: Math.random() * titleCanvas.width,
+                            y: Math.random() * titleCanvas.height,
+                            radius: options.defaultRadius + Math.random() * options.variantRadius,
+                            speedX: (Math.random() - 0.5) * options.defaultSpeed,
+                            speedY: (Math.random() - 0.5) * options.defaultSpeed,
+                        });
+                    }
+                }
+
+                function drawTitleParticles() {
+                    particles.forEach(p => {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = options.particleColor;
+                        ctx.fill();
+                    });
+                }
+
+                function updateTitleParticles() {
+                    particles.forEach(p => {
+                        p.x += p.speedX;
+                        p.y += p.speedY;
+                        if (p.x < 0 || p.x > titleCanvas.width) p.speedX *= -1;
+                        if (p.y < 0 || p.y > titleCanvas.height) p.speedY *= -1;
+                    });
+                }
+
+                function linkTitleParticles() {
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            if (distance < options.linkRadius) {
+                                const opacity = 1 - (distance / options.linkRadius);
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.strokeStyle = `rgba(167, 139, 250, ${opacity * 0.5})`;
+                                ctx.lineWidth = 1;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+
+                function animateTitle() {
+                    ctx.clearRect(0, 0, titleCanvas.width, titleCanvas.height);
+                    updateTitleParticles();
+                    drawTitleParticles();
+                    linkTitleParticles();
+                    requestAnimationFrame(animateTitle);
+                }
+
+                const titleObserver = new ResizeObserver(() => {
+                    resizeTitleCanvas();
+                    createTitleParticles();
+                });
+                titleObserver.observe(titleCanvas.parentElement);
+                animateTitle();
+            }
+
+            function initializeParticleCanvases() {
+                document.querySelectorAll('canvas.particle-effect-canvas').forEach(canvas => {
+                    const effectId = canvas.dataset.effectId;
+                    if (!effectLogics[effectId]) return;
+
+                    const ctx = canvas.getContext('2d');
+                    const state = {};
+                    let animationFrameId;
+
+                    const resizeCanvas = () => {
+                        const dpr = window.devicePixelRatio || 1;
+                        const rect = canvas.getBoundingClientRect();
+                        if (rect.width === 0 || rect.height === 0) return;
+                        canvas.width = rect.width * dpr;
+                        canvas.height = rect.height * dpr;
+                        ctx.scale(dpr, dpr);
+                        Object.keys(state).forEach(key => delete state[key]);
+                    };
+
+                    const animate = () => {
+                        if (!canvas.isConnected) {
+                           cancelAnimationFrame(animationFrameId);
+                           return;
+                        }
+                        effectLogics[effectId](ctx, state);
+                        animationFrameId = requestAnimationFrame(animate);
+                    };
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                if (!animationFrameId) {
+                                    resizeCanvas();
+                                    animate();
+                                }
+                            } else {
+                                cancelAnimationFrame(animationFrameId);
+                                animationFrameId = null;
+                            }
+                        });
+                    }, { threshold: 0.01 });
+
+                    observer.observe(canvas);
+                    window.addEventListener('resize', resizeCanvas);
+                });
+            }
+
+            initializeParticleCanvases();
 
         });
     </script>
 </body>
 </html>
-
-
